@@ -7,19 +7,13 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <header className="px-8 lg:px-24 py-4  bg-white">
-      <div className="grid grid-cols-2 xl:grid-cols-3 items-center">
-        <div className="flex justify-start">
-          <Logo />
-        </div>
-
-        <div className="justify-center hidden xl:flex">
+    <header className="px-8 xl:px-24 py-4  bg-white">
+      <div className="flex gap-3 items-center justify-between">
+        <Logo />
+        <div className="flex-1 hidden lg:flex justify-center">
           <NavLinks />
         </div>
-
-        <div className="flex justify-end">
-          <AuthButtons />
-        </div>
+        <AuthButtons />
       </div>
     </header>
   );
