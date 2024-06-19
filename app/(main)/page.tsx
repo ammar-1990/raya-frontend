@@ -22,10 +22,10 @@ export const revalidate = 0
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden pb-24">
-      <div className="mt-32">
+      <div className="">
         <FirstSection />
       </div>
-      <div className="mt-32">
+      <div className=" mt-12">
         <ServicesSection/>
       </div>
     </main>
@@ -59,7 +59,8 @@ export default function Home() {
 
 const FirstSection = () => {
   return (
-    <SectionWrapper className="relative ">
+    <SectionWrapper className="relative  !pt-60   ">
+      <div className="relative pt-8  w-full">
       <h1 className="text-[38px] text-center md:text-start md:text-[87px] flex flex-col leading-none text-font -mt-12">
         <span className=" font-bold">We Help you</span>
         <span>to grow your</span>
@@ -79,9 +80,11 @@ const FirstSection = () => {
       >
         Get Started
       </Button>
-      <div className="absolute -right-44 -top-32 w-[800px] aspect-[3/2.5] hidden xl:block">
+      <div className="absolute -right-44 -top-32 w-[800px] aspect-[3/2.5] hidden xl:block ">
         <Image src={"/FirstImage.png"} alt="first image" fill className="" />
       </div>
+      </div>
+     
     </SectionWrapper>
   );
 };
@@ -108,9 +111,11 @@ const ServicesSection = async() => {
         </span>
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-24 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-24 gap-8 relative">
         {services.map(service=><ServiceCard key={service.id} service={service}/>)}
-
+<div className="absolute -right-24 top-1/2 -translate-y-[50%] w-[500px] h-[450px] -z-10 hidden md:block">
+<Image src={'/Ellipse.png'}  alt="ellipse" fill />
+</div>
       </div>
     </SectionWrapper>
   );
@@ -120,12 +125,12 @@ const ServicesSection = async() => {
 
 const ServiceCard = ({service}:{service:Service})=>{
   return (
-    <article className="p-6 shadow-lg rounded-lg flex flex-col gap-2" >
+    <article className="p-6 shadow-lg rounded-lg flex flex-col gap-2 bg-white" >
           <div className={cn("flex items-center justify-center w-12 h-12 rounded-lg",colorsMapping[service.iconColor])}>
             {iconsMapping[service.icon]}
           </div>
           <h3 className="uppercase font-bold">{service.label}</h3>
-          <p className="text-sm text-gray-400">{service.description}</p>
+          <p className="text-sm text-gray-400 mt-auto">{service.description}</p>
         </article>
   )
 }
