@@ -57,7 +57,8 @@ const config = {
        
           start: '#7559FF', 
           end: '#5636F3', 
-        }
+        },
+        font:"#331B3B"
       },
       borderRadius: {
         lg: "var(--radius)",
