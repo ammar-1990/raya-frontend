@@ -46,6 +46,7 @@ const ServicesSection = async () => {
     show: {
       opacity: 1,
       transition: {
+    
         staggerChildren: 0.2,
       },
     },
@@ -75,10 +76,11 @@ const ServicesSection = async () => {
 
       <MotionWrapper
         variants={containerVariants}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-24 gap-8 relative items-stretch"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-24 gap-8 relative items-stretch"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+     
+        viewport={{ once: true, amount: 0.6 }}
       >
         {services.map((service) => (
           <MotionWrapper variants={cardVariants} key={service.id}>
@@ -117,7 +119,7 @@ const AboutUs = () => {
       initial={{x:-20,opacity:0}}
       whileInView={{x:0,opacity:1}}
       transition={{delay:0.1,stiffness: 200, type: "spring", damping: 8}}
-      viewport={{ once: false, amount: 0.6 }}
+      viewport={{ once: true, amount: 0.6 }}
       className="flex-1 hidden md:block">
         <div className="w-full aspect-square relative">
           <Image
@@ -133,7 +135,7 @@ const AboutUs = () => {
        initial={{x:20,opacity:0}}
        whileInView={{x:0,opacity:1}}
        transition={{delay:0.1,stiffness: 200, type: "spring", damping: 8}}
-       viewport={{ once: false, amount: 0.6 }}
+       viewport={{ once: true, amount: 0.6 }}
       className="flex-1  flex items-center justify-center">
         <div className="flex flex-col gap-12">
           <h3 className="text-[48px] font-bold">
