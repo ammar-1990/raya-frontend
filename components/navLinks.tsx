@@ -37,7 +37,7 @@ const NavLinks = (props: Props) => {
         {links.map((link) => (
           <li className="relative flex justify-center shrink-0" key={link.label}>
             <Link className={cn("select-none font-semibold",link.active && "text-center text-black relative z-10")} href={link.href}>{link.label}</Link>
-            {link.active && <motion.div  layoutId="underline" className="h-[2px] w-[calc(100%+7px)] bg-yellow-500 bottom-1.5 absolute   "/>}
+            {link.active && <motion.div  layoutId="underline" className="h-[2.5px] w-[calc(100%+7px)] bg-yellow-500 bottom-1.5 absolute   "/>}
           </li>
         ))}
       </ul>
