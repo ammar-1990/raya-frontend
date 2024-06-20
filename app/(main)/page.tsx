@@ -21,7 +21,7 @@ export default function Home() {
       <div className="">
         <FirstSection />
       </div>
-      <div className="mt-44 md:mt-12">
+      <div className="mt-12">
         <ServicesSection />
       </div>
     </main>
@@ -30,8 +30,8 @@ export default function Home() {
 
 const FirstSection = () => {
   return (
-    <SectionWrapper className="relative  !pt-60   ">
-      <div className="relative pt-8  w-full">
+    <SectionWrapper className="relative  md:!pt-60 min-h-screen flex items-center  ">
+      <div className="relative pt-8  w-full ">
         <h1 className="text-[38px] text-center md:text-start md:text-[87px] min-h-[130px] md:min-h-[260px] flex flex-col leading-none text-font -mt-12">
           <MotionWrapper
             className="overflow-hidden"
