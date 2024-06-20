@@ -21,8 +21,11 @@ export default function Home() {
       <div className="">
         <FirstSection />
       </div>
-      <div className="mt-12">
+      <div className="mt-24">
         <ServicesSection />
+      </div>
+      <div className="mt-24">
+        <AboutUs />
       </div>
     </main>
   );
@@ -74,16 +77,14 @@ const FirstSection = () => {
             </span>
           </MotionWrapper>
         </h1>
-        <MotionWrapper
-        
-        >
-        <p className="max-w-[550px] md:text-[14px] lg:text-[17px] text-font/90 mt-6 md:mt-12 mx-auto md:mx-0 text-[10px] text-center md:text-start ">
-          Lorem Ipsum has been the industry&apos;s standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </p>
+        <MotionWrapper>
+          <p className="max-w-[550px] md:text-[14px] lg:text-[17px] text-font/90 mt-6 md:mt-12 mx-auto md:mx-0 text-[10px] text-center md:text-start ">
+            Lorem Ipsum has been the industry&apos;s standard dummy text ever
+            since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
         </MotionWrapper>
-      
+
         <Button
           variant={"site"}
           className="mt-6 px-24 !rounded-lg uppercase text-sm mx-auto md:mx-0 flex"
@@ -171,5 +172,59 @@ const ServiceCard = ({ service }: { service: Service }) => {
       <h3 className="uppercase font-bold">{service.label}</h3>
       <p className="text-sm text-gray-400 mt-auto">{service.description}</p>
     </article>
+  );
+};
+
+const AboutUs = () => {
+  return (
+    <SectionWrapper className="flex px-4 gap-8">
+      <MotionWrapper
+      initial={{x:-20,opacity:0}}
+      whileInView={{x:0,opacity:1}}
+      transition={{delay:0.1,stiffness: 200, type: "spring", damping: 8}}
+      viewport={{ once: false, amount: 0.6 }}
+      className="flex-1 hidden md:block">
+        <div className="w-full aspect-square relative">
+          <Image
+            alt="about us"
+            src={"/about-us.png"}
+            className="object-contain"
+            fill
+          />
+        </div>
+      </MotionWrapper>
+      {/* about text */}
+      <MotionWrapper
+       initial={{x:20,opacity:0}}
+       whileInView={{x:0,opacity:1}}
+       transition={{delay:0.1,stiffness: 200, type: "spring", damping: 8}}
+       viewport={{ once: false, amount: 0.6 }}
+      className="flex-1  flex items-center justify-center">
+        <div className="flex flex-col gap-12">
+          <h3 className="text-[48px] font-bold">
+            About
+            <span className="relative w-fit">
+              {" "}
+              Us
+              <span className="absolute -left-2 md:-left-4 md:bottom-2 bottom-1 md:h-[8px] h-[8px] bg-yellow-500 w-full -z-10 " />
+            </span>
+          </h3>
+          <div className="space-y-5 ">
+          <p className="max-w-[350px] md:max-w-[550px] md:text-[14px] lg:text-[17px] text-font/90   mx-auto md:mx-0 text-[10px] ">
+            Lorem Ipsum has been the industry&apos;s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
+          <p className="max-w-[350px] md:max-w-[550px] md:text-[14px] lg:text-[17px] text-font/90   mx-auto md:mx-0 text-[10px] ">
+            Lorem Ipsum has been the industry&apos;s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
+          </div>
+          <Button variant={'site'} className="uppercase w-fit sm:w-fit md:w-fit lg:w-fit xl:w-fit">Explore more</Button>
+        
+        </div>
+      </MotionWrapper>
+    </SectionWrapper>
   );
 };
