@@ -21,7 +21,7 @@ export default function Home() {
       <div className="">
         <FirstSection />
       </div>
-      <div className=" mt-12">
+      <div className="mt-44 md:mt-12">
         <ServicesSection />
       </div>
     </main>
@@ -32,7 +32,7 @@ const FirstSection = () => {
   return (
     <SectionWrapper className="relative  !pt-60   ">
       <div className="relative pt-8  w-full">
-        <h1 className="text-[38px] text-center md:text-start md:text-[87px] flex flex-col leading-none text-font -mt-12">
+        <h1 className="text-[38px] text-center md:text-start md:text-[87px] min-h-[130px] md:min-h-[260px] flex flex-col leading-none text-font -mt-12">
           <MotionWrapper
             className="overflow-hidden"
             initial={{ height: 0, y: 20 }}
@@ -74,11 +74,16 @@ const FirstSection = () => {
             </span>
           </MotionWrapper>
         </h1>
+        <MotionWrapper
+        
+        >
         <p className="max-w-[550px] md:text-[17px] text-font/90 mt-6 md:mt-12 mx-auto md:mx-0 text-[10px] text-center md:text-start ">
           Lorem Ipsum has been the industry&apos;s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
         </p>
+        </MotionWrapper>
+      
         <Button
           variant={"site"}
           className="mt-6 px-24 !rounded-lg uppercase text-sm mx-auto md:mx-0 flex"
