@@ -32,7 +32,7 @@ const FirstSection = () => {
   return (
     <SectionWrapper className="relative  md:!pt-60 min-h-screen flex items-center  ">
       <div className="relative pt-8  w-full ">
-        <h1 className="text-[38px] text-center md:text-start md:text-[87px] min-h-[130px] md:min-h-[260px] flex flex-col leading-none text-font -mt-12">
+        <h1 className="text-[38px] text-center md:text-start md:text-[55px] lg:text-[60px] 2xl:text-[87px] min-h-[130px] md:min-h-[160px] lg:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[260px] flex flex-col leading-none text-font -mt-12">
           <MotionWrapper
             className="overflow-hidden"
             initial={{ height: 0, y: 20 }}
@@ -77,7 +77,7 @@ const FirstSection = () => {
         <MotionWrapper
         
         >
-        <p className="max-w-[550px] md:text-[17px] text-font/90 mt-6 md:mt-12 mx-auto md:mx-0 text-[10px] text-center md:text-start ">
+        <p className="max-w-[550px] md:text-[14px] lg:text-[17px] text-font/90 mt-6 md:mt-12 mx-auto md:mx-0 text-[10px] text-center md:text-start ">
           Lorem Ipsum has been the industry&apos;s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
