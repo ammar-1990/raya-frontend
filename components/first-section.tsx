@@ -5,18 +5,23 @@ import MotionWrapper from "./motion-wrapper";
 import SectionWrapper from "./section-wrapper";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
+import { useMounted } from "@/contexts/mount-context";
 
 
 
 export const FirstSection = () => {
 
-    const [mount, setMount] = useState(false)
+    const {mounted,setMounted} = useMounted()
     useEffect(()=>{
-        setMount(true)
-    },[])
+        let timer:NodeJS.Timeout
+        if(!mounted){
+timer = setTimeout(()=>{setMounted(true)},1000)
+        }
+       return ()=>clearTimeout(timer)
+    },[mounted,setMounted])
 
 
-    if(!mount) return <section className="min-h-screen w-full bg-gradient-to-b from-gradient-start to-gradient-end flex items-center justify-center relative z-[9999999]">
+    if(!mounted) return <section className="fixed top-0 left-0 min-h-screen w-full bg-gradient-to-b from-gradient-start to-gradient-end flex items-center justify-center  z-[9999999]">
         <h1 className="text-4xl text-white font-bold">Raya</h1>
 
     </section>
