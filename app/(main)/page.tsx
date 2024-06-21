@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { Service } from "@prisma/client";
 import MotionWrapper from "@/components/motion-wrapper";
 import { Variants } from "framer-motion";
-import { FirstSection } from "@/components/first-section";
+
 
 //bg-[#D4F0FF]
 //bg-[#FFDED4]
@@ -31,6 +31,91 @@ export default function Home() {
     </main>
   );
 }
+export const FirstSection = () => {
+
+
+
+   
+  return (
+    <SectionWrapper className="relative  min-h-screen flex items-center gap-6 ">
+      <div className=" pt-8 flex-1   ">
+        <h1 className="text-[38px] text-center md:text-start md:text-[55px] lg:text-[60px] 2xl:text-[87px] min-h-[130px] md:min-h-[160px] lg:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[260px] flex flex-col leading-none text-font -mt-12">
+          <MotionWrapper
+            className="overflow-hidden"
+            initial={{ height: 0, y: 20 }}
+            whileInView={{
+              y: 0,
+              height: "auto",
+              transition: { duration: 0.5, delay: 0.2 },
+            }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <span className=" font-bold">We Help you</span>
+          </MotionWrapper>
+          <MotionWrapper
+            className="overflow-hidden"
+            initial={{ height: 0, y: 20 }}
+            whileInView={{
+              y: 0,
+              height: "auto",
+              transition: { duration: 0.5, delay: 0.3 },
+            }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <span>to grow your</span>
+          </MotionWrapper>
+          <MotionWrapper
+            className="overflow-hidden"
+            initial={{ height: 0, y: 20 }}
+            whileInView={{
+              y: 0,
+              height: "auto",
+              transition: { duration: 0.5, delay: 0.4 },
+            }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <span className="relative w-fit mx-auto md:mx-0">
+              {" "}
+              Business
+              <span className="absolute -left-2 md:-left-4 md:bottom-2 bottom-1 md:h-[18px] h-[8px] bg-yellow-500 w-full -z-10 " />
+            </span>
+          </MotionWrapper>
+        </h1>
+        <MotionWrapper
+        initial={{x:-20,opacity:0}}
+        whileInView={{x:0,opacity:1}}
+        transition={{duration:0.5,delay:0.5}}
+    viewport={{ once: true, amount: 0.2 }}
+        >
+          <p className="max-w-[550px] md:text-[14px] lg:text-[17px] text-font/90 mt-6 md:mt-12 mx-auto md:mx-0 text-[10px] text-center md:text-start ">
+            Lorem Ipsum has been the industry&apos;s standard dummy text ever
+            since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
+       
+
+        <Button
+          variant={"site"}
+          className="mt-6 px-24 !rounded-lg uppercase text-sm mx-auto md:mx-0 flex"
+        >
+          Get Started
+        </Button>
+        </MotionWrapper>
+      </div>
+      <div className="flex-1 lg:block hidden">
+      <MotionWrapper
+      initial={{y:20,opacity:0}}
+      whileInView={{y:0,opacity:1}}
+      transition={{duration:0.5,delay:0.3}}
+      viewport={{ once: true, amount: 0.2 }}
+      className="relative w-full aspect-[3/2.5]  ">
+          <Image src={"/FirstImage.png"} alt="first image" fill className="" />
+        </MotionWrapper>
+
+      </div>
+    </SectionWrapper>
+  );
+};
 
 
 
