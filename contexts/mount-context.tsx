@@ -11,8 +11,7 @@ import {
 } from "react";
 
 type ValuesType = {
-    mountedIntro:boolean,
-   setMountedIntro: Dispatch<SetStateAction<boolean>>;
+
   mounted: boolean;
   setMounted: Dispatch<SetStateAction<boolean>>;
 };
@@ -20,8 +19,7 @@ type ValuesType = {
 const initialValue: ValuesType = {
   mounted: false,
   setMounted: () => {},
-  mountedIntro:false,
-  setMountedIntro:()=>{}
+
 };
 
 export const MountContext = createContext<ValuesType>(initialValue);
@@ -30,7 +28,7 @@ export const MountProvider = ({ children }: { children: ReactNode }) => {
   const [mounted, setMounted] = useState(false);
   const [mountedIntro, setMountedIntro] = useState(false);
 
-  const values = { mounted, setMounted,mountedIntro,setMountedIntro };
+  const values = { mounted, setMounted};
 
 
   useEffect(() => {

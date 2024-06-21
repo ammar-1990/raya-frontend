@@ -31,7 +31,7 @@ export default function Home() {
     </main>
   );
 }
-export const FirstSection = () => {
+ const FirstSection = () => {
 
 
 
@@ -165,7 +165,7 @@ const ServicesSection = async () => {
         initial="hidden"
         whileInView="show"
      
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         {services.map((service) => (
           <MotionWrapper variants={cardVariants} key={service.id}>
