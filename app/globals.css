@@ -73,4 +73,10 @@
     body {
       @apply bg-background text-foreground;
     }
+
+    .siteContainer {
+      @apply max-w-[1200px] mx-auto px-4
+    }
   }
+
+

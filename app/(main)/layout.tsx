@@ -1,6 +1,6 @@
-import Header from '@/components/header'
-import { MountProvider } from '@/contexts/mount-context'
 
+
+import Header from '@/components/header'
 import React, { ReactNode } from 'react'
 
 type Props = {children:ReactNode}
@@ -8,15 +8,13 @@ type Props = {children:ReactNode}
 const layout = ({children}: Props) => {
   return (
    
-    <div>
-        <Header/>
+    <div className='bg-backGround min-h-screen'>
+      <div>
+        
+      </div>
+      <Header/>
         <div>
-        <MountProvider>
-
           {children}
-
-          </MountProvider>
-
         </div>
     </div>
 

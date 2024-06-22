@@ -1,48 +1,46 @@
-"use client";
+'use client'
 
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion } from 'framer-motion';
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import React from 'react'
+import SiteButton from './site-button'
 
-type Props = {};
+type Props = {}
 
 const NavLinks = (props: Props) => {
-  const pathname = usePathname();
-  const links = [
-    {
-      label: "Home",
-      href: "/",
-      active: pathname === "/",
-    },
-    {
-      label: "Services",
-      href: "/services",
-      active: pathname.split("/")[1].includes("services"),
-    },
-    {
-      label: "About Us",
-      href: "/about-us",
-      active: pathname.split("/")[1].includes("about-us"),
-    },
-    {
-      label: "Contact Us",
-      href: "/contact-us",
-      active: pathname.split("/")[1].includes("contact-us"),
-    },
-  ];
+const pathname = usePathname()
+    const links = [
+        {
+        label:"Services",
+        link:"/services",
+        active:pathname==="/services"
+  },
+        {
+        label:"Offers",
+        link:"/offers",
+        active:pathname==="/offers"
+  },
+        {
+        label:"Pricing",
+        link:"/pricing",
+        active:pathname==="/pricing"
+  },
+        {
+        label:"Blog",
+        link:"/blog",
+        active:pathname==="/blog"
+  },
+]
   return (
-    <nav >
-      <ul className="flex items-center gap-12">
-        {links.map((link) => (
-          <li className="relative flex justify-center shrink-0" key={link.label}>
-            <Link className={cn("select-none font-semibold",link.active && "text-center text-black relative z-10")} href={link.href}>{link.label}</Link>
-            {link.active && <motion.div  layoutId="underline" className="h-[2.5px] w-[calc(100%+7px)] bg-yellow-500 bottom-1.5 absolute   "/>}
-          </li>
-        ))}
-      </ul>
+    <nav>
+        <ul className='flex items-center gap-16 text-white text-sm'>
+            {links.map((link)=><li key={link.label}>
+                <Link href={link.link} target='_blank'>{link.label}</Link>
+            </li>)}
+            <li><SiteButton>Get Started</SiteButton></li>
+        </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default NavLinks;
+export default NavLinks
