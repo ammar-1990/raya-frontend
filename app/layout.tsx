@@ -3,10 +3,11 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] ,variable:'--inter'});
 const myFont = localFont({
-  src: "../fonts/CalSans-SemiBold.woff2"
+  src: "../fonts/CalSans-SemiBold.woff",variable:'--cal',weight:'400'
 });
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en">
-      <body className={myFont.className}>{children}</body>
+      <body className={cn(myFont.className,inter.className)}>{children}</body>
     </html>
     </ClerkProvider>
   );

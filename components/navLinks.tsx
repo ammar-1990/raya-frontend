@@ -35,9 +35,9 @@ const pathname = usePathname()
     <nav>
         <ul className='flex items-center gap-16 text-white text-sm'>
             {links.map((link)=><li key={link.label}>
-                <Link href={link.link} target='_blank'>{link.label}</Link>
+                <Link href={link.link} target='_blank' className='tracking-wider font-sans'>{link.label}</Link>
             </li>)}
-            <li><SiteButton>Get Started</SiteButton></li>
+            <li><SiteButton className='tracking-wider'>Get Started</SiteButton></li>
         </ul>
     </nav>
   )
