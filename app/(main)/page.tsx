@@ -13,7 +13,7 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="">
+    <div className="pb-12">
 
 
       {/* Hero section */}
@@ -52,7 +52,7 @@ const Hero = () => {
       <p className="text-white    lg:mt-4 mt-1 font-sans  text-xs sm:text-sm lg:text-lg text-center">
         No Calls. No BS.Just Results.
       </p>
-      <Button variant={"site"} className=" mt-12">
+      <Button variant={"site"} className=" mt-12 flex items-center justify-center pt-2.5">
         Book a call <ChevronRight className="ml-2" size={16} />
       </Button>
     </section>
