@@ -16,7 +16,7 @@ const page = (props: Props) => {
       {/* <BackgroundBeams /> */}
 
       {/* Hero section */}
-      <div className="mt-24">
+      <div className="md:mt-24 mt-16">
       <Hero />
       </div> 
       {/* Services */}
@@ -32,11 +32,11 @@ export default page;
 const Hero = () => {
   const words = ["better", "cute", "beautiful", "modern"]
   return (
-    <section className="px-6  flex flex-col  items-center relative bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_95%)] pb-12">
-      <p className="text-xl sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold  text-center">
+    <section className="px-6  flex flex-col  items-center relative bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_95%)] py-12">
+      <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold  text-center">
         Crafting High-Performance Websites
       </p>
-      <p className="text-xl sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold lg:mt-8 mt-2 text-center">
+      <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold lg:mt-8 mt-2 text-center">
         with Stunning{" "}
       
         <FlipWords words={words} />
