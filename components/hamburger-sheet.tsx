@@ -47,12 +47,12 @@ const HamburgerSheet = (props: Props) => {
       </SheetTrigger>
       <SheetContent
         side={"top"}
-        className="min-h-screen bg-transparent border-b-0 text-white"
+        className="min-h-screen bg-transparent border-b-0 text-white overflow-hidden"
       >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="bg-backGround absolute inset-0 p-12 flex items-center flex-col text-white "
+          className="bg-backGround absolute inset-0 p-12 flex items-center flex-col text-white overflow-hidden"
         >
           {links.map((link,index) => (
             <SheetClose
