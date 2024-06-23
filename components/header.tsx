@@ -9,7 +9,10 @@ const Header = (props: Props) => {
 <div className='siteContainer flex items-center justify-between h-[72px]'>
     {/* logo */}
     <div className='text-white'>Logo</div>
+    <div className='hidden md:block'>
     <NavLinks/>
+    </div>
+   
 </div>
     </div>
   )
