@@ -16,9 +16,9 @@ const SiteButton = ({className,children,containerStyle,...rest}: Props) => {
 
        
         {children}</Button>
-    <span className='absolute right-0 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_blur-end  w-20 h-12 -translate-y-[50%] blur-md transition z-0 group-hover:blur-lg'/>
-    <span className='absolute -right-1 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_blur-end  w-8 h-8 -translate-y-[68%] blur-[12px] transition z-0 group-hover:blur-[20px] '/>
-    <span className='absolute right-0 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_blur-end  w-8 h-8 -translate-y-[70%] blur-[4px] transition z-0 group-hover:blur-[10px]'/>
+    <span className='absolute right-0 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_main-start  w-20 h-12 -translate-y-[50%] blur-md transition z-0 group-hover:blur-lg'/>
+    <span className='absolute -right-1 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_main-start  w-8 h-8 -translate-y-[68%] blur-[12px] transition z-0 group-hover:blur-[20px] '/>
+    <span className='absolute right-0 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_main-start  w-8 h-8 -translate-y-[70%] blur-[4px] transition z-0 group-hover:blur-[10px]'/>
     </div>
     
   )
