@@ -32,7 +32,7 @@ export default page;
 const Hero = () => {
   const words = ["better", "cute", "beautiful", "modern"]
   return (
-    <section className="siteContainer  flex flex-col  items-center relative bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_95%)]">
+    <section className="px-6  flex flex-col  items-center relative bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_95%)] pb-12">
       <p className="text-xl sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold mt-32 3xl:mt-52 4xl:mt-64 text-center">
         Crafting High-Performance Websites
       </p>
