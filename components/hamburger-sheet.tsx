@@ -54,7 +54,7 @@ const HamburgerSheet = (props: Props) => {
       </SheetTrigger>
       <SheetContent
         side={"top"}
-        className="min-h-screen bg-backGround flex items-center flex-col z-[9999] border-b-0 text-white overflow-hidden justify-center"
+        className="h-screen bg-backGround flex items-center flex-col z-[9999] border-b-0 text-white overflow-hidden justify-center"
       >
      
           {links.map((link, index) => {
