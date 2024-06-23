@@ -54,13 +54,9 @@ const HamburgerSheet = (props: Props) => {
       </SheetTrigger>
       <SheetContent
         side={"top"}
-        className="min-h-screen bg-transparent border-b-0 text-white overflow-hidden"
+        className="min-h-screen bg-backGround flex items-center flex-col z-[9999] border-b-0 text-white overflow-hidden justify-center"
       >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="bg-backGround absolute inset-0 p-12 flex items-center flex-col text-white overflow-hidden"
-        >
+     
           {links.map((link, index) => {
             if (link.type !== "Button")
               return (
@@ -71,6 +67,7 @@ const HamburgerSheet = (props: Props) => {
                 >
                   <Link href={link.link} className="">
                     <motion.span
+                    className="font-sans"
                       initial={{ opacity: 0, y: -30 }}
                       animate={{
                         opacity: 1,
@@ -96,7 +93,7 @@ const HamburgerSheet = (props: Props) => {
               </SheetClose>
             );
           })}
-        </motion.div>
+    
       </SheetContent>
     </Sheet>
   );

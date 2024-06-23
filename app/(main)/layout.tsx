@@ -9,7 +9,7 @@ const layout = ({ children }: Props) => {
   return (
     <div className="bg-backGround min-h-screen ">
      
-      <Header />
+      
       <div>{children}</div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { BackgroundBeams } from "@/components/background-beams";
+
 
 import prisma from "@/lib/prisma"
 import { Button } from "@/components/ui/button";
@@ -7,20 +7,23 @@ import React from "react";
 import ServiceCard from "@/components/service-card";
 import ServiceFeed from "@/components/service-feed";
 import { FlipWords } from "@/components/flip-words";
+import Header from "@/components/header";
 
 type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="pb-12">
-      {/* <BackgroundBeams /> */}
+    <div className="">
+
 
       {/* Hero section */}
-      <div className="md:mt-24 mt-16">
+      <div className="relative pb-12">
+        <div className="bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_95%)] absolute inset-0 w-full h-full"/>
+      <Header />
       <Hero />
       </div> 
       {/* Services */}
-      <div className="mt-44">
+      <div className="mt-12">
         <Services />
       </div>
     </div>
@@ -32,7 +35,8 @@ export default page;
 const Hero = () => {
   const words = ["better", "cute", "beautiful", "modern"]
   return (
-    <section className="px-6  flex flex-col  items-center relative bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_95%)] py-12">
+    <section className="px-6  flex flex-col  items-center relative  py-12 mt-12">
+      
       <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold  text-center">
         Crafting High-Performance Websites
       </p>
