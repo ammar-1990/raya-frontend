@@ -106,7 +106,7 @@ export const LampContainer = ({
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative w-full"
+        className="relative w-full pb-12"
       >
       {children}
       </motion.div>
