@@ -61,7 +61,7 @@ const Hero = () => {
         Crafting High-Performance Websites
       </p>
       <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold lg:mt-8 mt-2 text-center">
-        with Stunning <FlipWords words={words} />
+        with Stunning <span className="lg:min-w-[300px] min-w-[100px] inline-block text-start"><FlipWords words={words} /></span>
       </p>
       <p className="text-white mt-6   lg:mt-12 font-sans text-xs sm:text-sm lg:text-lg text-center">
         We build websites that drive results and help your business grow.
