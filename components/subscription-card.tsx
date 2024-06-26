@@ -47,7 +47,7 @@ const SubscriptionCard = ({ subscription }: Props) => {
           "w-full mt-24 bg-backGround hover:bg-backGround/80 hover:text-white border border-neutral-700/[70%] hover:bg-gradient_main-start transition",
 
           {
-            "border-[#a3a3a3] text-black bg-gradient-to-tr from-[#D8D8D8] to-[#DFDFDF] hover:opacity-80 hover:text-black  ":
+            "border-[#a3a3a3] text-backGround bg-gradient-to-tr from-[#D8D8D8] to-[#DFDFDF] hover:opacity-80 hover:text-backGround  ":
               subscription.type === "PRO",
           }
         )}
