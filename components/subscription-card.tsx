@@ -44,10 +44,10 @@ const SubscriptionCard = ({ subscription }: Props) => {
       </div>
       <Button
         className={cn(
-          "w-full mt-24 bg-backGround hover:bg-backGround/80 hover:text-white border border-neutral-700/[70%] hover:bg-gradient-to-br from-gradient_main-start to-gradient_main-end transition-opacity",
+          "w-full mt-24 bg-backGround hover:bg-backGround/80 hover:text-white border border-neutral-700/[70%] hover:bg-gradient_main-start transition",
 
           {
-            "border-[#a3a3a3] text-black bg-gradient-to-tr from-[#D8D8D8] to-[#DFDFDF] hover:bg-gradient-to-br hover:from-gradient_main-start hover:to-gradient_main-end":
+            "border-[#a3a3a3] text-black bg-gradient-to-tr from-[#D8D8D8] to-[#DFDFDF] hover:opacity-80 hover:text-black  ":
               subscription.type === "PRO",
           }
         )}
