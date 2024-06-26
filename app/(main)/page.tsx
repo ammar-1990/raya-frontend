@@ -11,6 +11,8 @@ import Image from "next/image";
 import { FaChess, FaMagnifyingGlass, FaRuler } from "react-icons/fa6";
 import { TbTargetArrow } from "react-icons/tb";
 import { LampContainer } from "@/components/lamp-effect";
+import Motion from "@/components/motion";
+import { Variants } from "framer-motion";
 
 type Props = {};
 export const revalidate = 0;
@@ -142,6 +144,21 @@ const WhatWeDo = () => {
       icon: <FaRuler size={26} />,
     },
   ];
+  const containerVariants:Variants = {
+    hidden: { opacity: 1 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,delayChildren:0.4
+      },
+    },
+  };
+  
+  const itemVariants:Variants = {
+    hidden: { height: 0,y:20  },
+    show: { height: 'auto',y:0 ,  },
+   
+  };
   return (
     <section className="siteContainer grid grid-cols-1 md:grid-cols-2 gap-10  md:gap-4 lg:gap-20">
       <article className="flex flex-col gap-12">
@@ -161,11 +178,23 @@ const WhatWeDo = () => {
         </div>
       </article>
 
-      <article className="space-y-4 flex flex-col justify-between">
-        {whatWeDo.map((el) => (
-          <WhatWeDoCard key={el.label} whatWeDo={el} />
+      <Motion 
+         variants={containerVariants}
+         initial="hidden"
+         whileInView="show"
+      className="space-y-4 flex flex-col justify-between">
+        {whatWeDo.map((el,i) => (
+          <div
+          key={el.label}
+          className="min-h-[100px]" >
+            <Motion  
+            
+        variants={itemVariants}
+          className="overflow-hidden"
+          ><WhatWeDoCard  whatWeDo={el} /></Motion>
+            </div>
         ))}
-      </article>
+      </Motion>
     </section>
   );
 };
@@ -176,7 +205,7 @@ const WhatWeDoCard = ({
   whatWeDo: { label: string; description: string; icon: ReactNode };
 }) => {
   return (
-    <article className="flex  gap-4">
+    <article className="flex  gap-4 ">
       <div className="md:w-20  md:h-20 w-14 h-14 shrink-0 rounded-2xl flex items-center justify-center bg-gradient-to-b from-gradient_main-start to-gradient_main-end text-white ">
         {whatWeDo.icon}
       </div>
