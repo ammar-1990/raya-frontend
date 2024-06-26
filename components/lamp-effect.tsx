@@ -16,7 +16,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-[700px] flex-col items-center justify-center  overflow-hidden bg-backGround w-full rounded-md z-0 pt-96",
+        "relative flex min-h-[700px] flex-col items-center justify-center    bg-backGround w-full rounded-md z-0 pt-96 siteContainer overflow-hidden",
         className
       )}
     >
@@ -93,8 +93,9 @@ export const LampContainer = ({
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative w-full pb-12"
+        className="relative w-full pb-12 "
       >
+   
       {children}
       </motion.div>
     </div>

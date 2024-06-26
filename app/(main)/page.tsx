@@ -100,7 +100,7 @@ const Subscriptions = async () => {
     },
   });
   return (
-    <section className="siteContainer">
+    <section className="w-full">
       <h2 className="text-center text-white text-2xl md:text-4xl tracking-widest">
         Purchase Subscription
       </h2>
