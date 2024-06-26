@@ -5,24 +5,6 @@ import { cn } from "@/lib/utils";
 
 
 
-export function LampDemo({children}:{children:ReactNode}) {
-  return (
-    <LampContainer>
-      <motion.div
-        initial={{ opacity: 0.5, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        
-      >
-        {children}
-      </motion.div>
-    </LampContainer>
-  );
-}
 
 export const LampContainer = ({
   children,
@@ -34,7 +16,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-[700px] flex-col items-center justify-center  overflow-hidden bg-backGround w-full rounded-md z-0 pt-36",
+        "relative flex min-h-[700px] flex-col items-center justify-center  overflow-hidden bg-backGround w-full rounded-md z-0 pt-96",
         className
       )}
     >

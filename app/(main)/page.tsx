@@ -32,7 +32,7 @@ const page = (props: Props) => {
         <Services />
       </div>
       {/* Subscriptions */}
-      <div className="mt-32">
+      <div className="">
         <LampContainer className="">
           <div className="relative z-50">
           <Subscriptions />
