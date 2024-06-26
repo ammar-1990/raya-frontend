@@ -22,18 +22,21 @@ const page = (props: Props) => {
         <Header />
         <Hero />
       </div>
+      {/* what we do */}
+      <div className="sm:mt-48 mt-32">
+        <WhatWeDo />
+      </div>
       {/* Services */}
-      <div className="mt-12">
+      <div className="sm:mt-44 mt-32">
         <Services />
       </div>
       {/* Subscriptions */}
       <div className="mt-32">
         <Subscriptions />
       </div>
-
-      {/* what we do */}
-      <div className="mt-40">
-        <WhatWeDo />
+      {/* Banner */}
+      <div className="mt-24 siteContainer">
+        <Banner />
       </div>
     </div>
   );
@@ -106,29 +109,32 @@ const Subscriptions = async () => {
 };
 
 const WhatWeDo = () => {
-
   const whatWeDo = [
     {
-        label:"Discovery",
-        description:"We meet with you to learn about your business, your goals, and your target audience.",
-        icon: <FaMagnifyingGlass size={26} />
+      label: "Discovery",
+      description:
+        "We meet with you to learn about your business, your goals, and your target audience.",
+      icon: <FaMagnifyingGlass size={26} />,
     },
     {
-        label:"Strategy",
-        description:"We develop a customized marketing strategy that is based on your unique needs and goals.",
-        icon: <FaChess size={26} />
+      label: "Strategy",
+      description:
+        "We develop a customized marketing strategy that is based on your unique needs and goals.",
+      icon: <FaChess size={26} />,
     },
     {
-        label:"Execution",
-        description:"We execute our strategy using the latest digital marketing tools and techniques.",
-        icon: <TbTargetArrow  size={26} />
+      label: "Execution",
+      description:
+        "We execute our strategy using the latest digital marketing tools and techniques.",
+      icon: <TbTargetArrow size={26} />,
     },
     {
-        label:"Measurement",
-        description:"We track the results of our campaigns so that we can make adjustments as needed.",
-        icon: <FaRuler  size={26} />
+      label: "Measurement",
+      description:
+        "We track the results of our campaigns so that we can make adjustments as needed.",
+      icon: <FaRuler size={26} />,
     },
-  ]
+  ];
   return (
     <section className="siteContainer grid grid-cols-1 md:grid-cols-2 gap-10  md:gap-4 lg:gap-20">
       <article className="flex flex-col gap-12">
@@ -149,25 +155,65 @@ const WhatWeDo = () => {
       </article>
 
       <article className="space-y-4 flex flex-col justify-between">
-        {whatWeDo.map(el=><WhatWeDoCard key={el.label} whatWeDo={el}/>)}
-       
+        {whatWeDo.map((el) => (
+          <WhatWeDoCard key={el.label} whatWeDo={el} />
+        ))}
       </article>
     </section>
   );
 };
 
-const WhatWeDoCard = ({whatWeDo}:{whatWeDo:{label:string,description:string,icon:ReactNode}}) => {
+const WhatWeDoCard = ({
+  whatWeDo,
+}: {
+  whatWeDo: { label: string; description: string; icon: ReactNode };
+}) => {
   return (
     <article className="flex  gap-4">
       <div className="md:w-20  md:h-20 w-14 h-14 shrink-0 rounded-2xl flex items-center justify-center bg-gradient-to-b from-gradient_main-start to-gradient_main-end text-white ">
-      {whatWeDo.icon}
+        {whatWeDo.icon}
       </div>
       <div>
         <h3 className="text-white text-2xl">{whatWeDo.label}</h3>
         <p className="text-white/60 font-sans max-w-[400px] text-xs md:text-sm mt-0 md:mt-4">
-         {whatWeDo.description}
+          {whatWeDo.description}
         </p>
       </div>
     </article>
+  );
+};
+
+const Banner = () => {
+  return (
+    <section className="relative md:aspect-video max-h-[371px] w-full rounded-xl bg-[#513EF5] overflow-hidden gap-8 md:gap-12 lg:gap-24 grid grid-cols-1 md:grid-cols-2 items-center p-8 lg:px-20 sm:px-12 px-6">
+      <div
+        className="absolute h-[200%] aspect-square
+       rounded-full -left-[100px] top-1/2 -translate-y-[50%]
+        bg-gradient-to-b from-gradient_main-start to-gradient_main-end to-100% blur-[2px]"
+      />
+
+      <div
+        className="absolute h-[120%] aspect-square
+       rounded-full -left-[100px] top-1/2 -translate-y-[50%]
+        bg-gradient-to-r from-gradient_main-start from-4% to-gradient_main-end to-95%  blur-[2px]"
+      />
+
+      <div className="absolute h-full aspect-square rounded-full -left-[280px] top-1/2 -translate-y-[50%] bg-[#513EF5] blur-[2px]" />
+      <div
+        className="absolute h-[120%] aspect-square
+       rounded-full left-[345px] top-1/2 -translate-y-[50%]
+        bg-gradient-to-r from-gradient_main-start from-4% to-gradient_main-end to-95% blur-[2px]"
+      />
+      <article>
+        <p className="relative z-50 text-white text-2xl md:text-4xl lg:text-6xl font-semibold font-sans tracking-wider capitalize leading-1">
+          Elevate your
+          <br /> brand Today!
+        </p>
+      </article>
+      <article className="relative z-50">
+<p className="text-white font-sans text-xs sm:text-sm md:text-base">Ready to transform your digital dresence? Let&apos;s<br/> create magic together! book our services now!</p>
+<Button className="rounded-full text-black bg-white hover:bg-white/80 font-sans mt-6 md:px-12 md:py-6 px-8 py-4 md:text-xl ">Book a call</Button>
+      </article>
+    </section>
   );
 };
