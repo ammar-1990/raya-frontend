@@ -10,6 +10,7 @@ import SubscriptionCard from "@/components/subscription-card";
 import Image from "next/image";
 import { FaChess, FaMagnifyingGlass, FaRuler } from "react-icons/fa6";
 import { TbTargetArrow } from "react-icons/tb";
+import { LampContainer } from "@/components/lamp-effect";
 
 type Props = {};
 export const revalidate = 0;
@@ -32,10 +33,16 @@ const page = (props: Props) => {
       </div>
       {/* Subscriptions */}
       <div className="mt-32">
-        <Subscriptions />
+        <LampContainer className="">
+          <div className="relative z-50">
+          <Subscriptions />
+          </div>
+       
+        </LampContainer>
+  
       </div>
       {/* Banner */}
-      <div className="mt-24 siteContainer">
+      <div className="mt-24 siteContainer ">
         <Banner />
       </div>
     </div>
