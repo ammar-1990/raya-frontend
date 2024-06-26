@@ -20,13 +20,13 @@ const page = (props: Props) => {
   return (
     <div className="pb-12">
       {/* Hero section */}
-      <div className="relative pb-12">
-        <div className="bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_95%)] absolute inset-0 w-full h-full" />
+      <div className="relative pb-44">
+        <div className="bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)] absolute inset-0 w-full h-full" />
         <Header />
         <Hero />
       </div>
       {/* what we do */}
-      <div className="sm:mt-48 mt-32">
+      <div className="">
         <WhatWeDo />
       </div>
       {/* Services */}
