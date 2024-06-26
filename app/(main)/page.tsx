@@ -149,9 +149,11 @@ const WhatWeDo = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,delayChildren:0.4
+        staggerChildren: 0.2,delayChildren:0.4,
+        
       },
     },
+    
   };
   
   const itemVariants:Variants = {
@@ -182,6 +184,7 @@ const WhatWeDo = () => {
          variants={containerVariants}
          initial="hidden"
          whileInView="show"
+          viewport={{ once: true }}
       className="space-y-4 flex flex-col justify-between">
         {whatWeDo.map((el,i) => (
           <div
