@@ -8,8 +8,8 @@ type Props = { service: Service,show:string,setShow:(val:string)=>void };
 const ServiceCard = ({ service,setShow,show }: Props) => {
  
   return (
-    <motion.article className="relative aspect-video   sm:aspect-square p-2" onMouseEnter={()=>setShow(service.id)}  >
-      <div className="bg-gradient-to-r from-gradient_dark-start to-gradient_dark-end h-full border-[#334155] border p-8 rounded-2xl relative z-20">
+    <motion.article className="relative    p-2" onMouseEnter={()=>setShow(service.id)}  >
+      <div className="bg-gradient-to-r  min-h-[250px] from-gradient_dark-start to-gradient_dark-end h-full border-[#334155] border p-8 rounded-2xl relative z-20">
         <h3 className='capitalize text-white '>{service.label}</h3>
         <p className='text-xs text-text mt-8 font-sans'>{service.description}</p>
       </div>

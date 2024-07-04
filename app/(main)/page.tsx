@@ -26,15 +26,16 @@ const page = (props: Props) => {
         <Hero />
       </div>
       {/* what we do */}
-      <div className="">
-        <WhatWeDo />
+      <div id="services" className="pt-8">
+      <Services />
       </div>
       {/* Services */}
-      <div className="sm:mt-44 mt-32">
-        <Services />
+      <div  className="sm:mt-44 mt-32 pt-8">
+      <WhatWeDo />
+      
       </div>
       {/* Subscriptions */}
-      <div className="">
+      {/* <div className="">
         <LampContainer className="">
           <div className="relative z-50">
           <Subscriptions />
@@ -42,7 +43,7 @@ const page = (props: Props) => {
        
         </LampContainer>
   
-      </div>
+      </div> */}
       {/* Banner */}
       <div className="mt-24 siteContainer ">
         <Banner />
@@ -157,8 +158,8 @@ const WhatWeDo = () => {
   };
   
   const itemVariants:Variants = {
-    hidden: { height: 0,y:20  },
-    show: { height: 'auto',y:0 ,  },
+    hidden: { opacity: 0,y:20  },
+    show: { opacity: 1,y:0 ,  },
    
   };
   return (

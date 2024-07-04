@@ -4,10 +4,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
+import ModalProvide from "@/providers/modal-providers";
+import { ContactProvider } from "@/contexts/contact-context";
 
-const inter = Inter({ subsets: ["latin"] ,variable:'--inter'});
+const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const myFont = localFont({
-  src: "../fonts/CalSans-SemiBold.woff",variable:'--cal',weight:'400'
+  src: "../fonts/CalSans-SemiBold.woff",
+  variable: "--cal",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -22,9 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body className={cn(myFont.className,inter.className)}>{children}</body>
-    </html>
+      <html lang="en">
+        <ContactProvider>
+          <body className={cn(myFont.className, inter.className)}>
+            {children}
+            <ModalProvide />
+          </body>
+        </ContactProvider>
+      </html>
     </ClerkProvider>
   );
 }
