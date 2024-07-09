@@ -19,7 +19,7 @@ import { Calendar } from "./ui/calendar";
 type Props = {};
 
 const BookingForm = (props: Props) => {
-  const { form, onSubmit,relatedBookings } = useBooking();
+  const { form, onSubmit,relatedBookings ,scrollerRef} = useBooking();
 const isLoading = form.formState.isSubmitting
   return (
     <Form {...form}>
@@ -27,7 +27,9 @@ const isLoading = form.formState.isSubmitting
         onSubmit={form.handleSubmit(onSubmit)}
         className="flex flex-col gap-1 h-fit justify-between"
       >
+       
         <div className=" h-[calc(100vh-170px)] overflow-y-auto pb-4 space-y-3">
+        <div ref={scrollerRef}/>
           <FormField
             control={form.control}
             name="name"
@@ -38,6 +40,7 @@ const isLoading = form.formState.isSubmitting
                 </FormLabel>
                 <FormControl>
                   <Input
+                  autoFocus={true}
                     className="text-black caret-black focus-visible:ring-transparent focus-visible:ring-0 focus:ring-transparent focus-within:ring-0 focus-within:ring-offset-0 focus-within:ring-offset-transparent border-2 focus-within:border-gradient_main-start transition border-transparent  bg-gray-200"
                     placeholder=""
                     {...field}
@@ -136,6 +139,7 @@ const isLoading = form.formState.isSubmitting
 
                 <FormControl>
                   <Calendar
+                  
                     showOutsideDays={false}
                     mode="single"
                     className=" text-black bg-gray-200 flex justify-center rounded-xl w-full"

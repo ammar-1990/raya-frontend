@@ -13,6 +13,7 @@ import { TbTargetArrow } from "react-icons/tb";
 import { LampContainer } from "@/components/lamp-effect";
 import Motion from "@/components/motion";
 import { Variants } from "framer-motion";
+import SheetButton from "@/components/sheet-button";
 
 type Props = {};
 export const revalidate = 0;
@@ -70,12 +71,7 @@ const Hero = () => {
       <p className="text-white    lg:mt-4 mt-1 font-sans  text-xs sm:text-sm lg:text-lg text-center">
         No Calls. No BS.Just Results.
       </p>
-      <Button
-        variant={"site"}
-        className=" mt-12 flex items-center justify-center pt-2.5"
-      >
-        Book a call <ChevronRight className="ml-2" size={16} />
-      </Button>
+    <SheetButton/>
     </section>
   );
 };

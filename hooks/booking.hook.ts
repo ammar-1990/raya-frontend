@@ -3,7 +3,7 @@ import { getBookingsDate } from "@/actions/get-bookings-date";
 import { useContact } from "@/contexts/contact-context";
 import { bookingSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -17,7 +17,12 @@ export const useBooking = () => {
     }[]
   >([]);
 
+  const scrollerRef = useRef<null | HTMLDivElement>(null)
+
   useEffect(() => {
+
+  
+
     (async () => {
       try {
         const data = await getBookingsDate();
@@ -30,6 +35,12 @@ export const useBooking = () => {
       }
     })();
   }, []);
+
+  useEffect(()=>{
+    if(!scrollerRef.current) return
+    const timing = setTimeout(()=>{  scrollerRef.current?.scrollIntoView();},0)
+    
+  },[scrollerRef])
 
   const form = useForm<z.infer<typeof bookingSchema>>({
     resolver: zodResolver(bookingSchema),
@@ -71,5 +82,5 @@ export const useBooking = () => {
     }
   }
 
-  return { onSubmit, form, relatedBookings };
+  return { onSubmit, form, relatedBookings ,scrollerRef};
 };
