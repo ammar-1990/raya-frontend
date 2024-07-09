@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 import ModalProvide from "@/providers/modal-providers";
 import { ContactProvider } from "@/contexts/contact-context";
-
+import { Toaster } from "@/components/ui/sonner"
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const myFont = localFont({
   src: "../fonts/CalSans-SemiBold.woff",
@@ -31,6 +31,7 @@ export default function RootLayout({
           <body className={cn(myFont.className, inter.className)}>
             {children}
             <ModalProvide />
+         <Toaster richColors />
           </body>
         </ContactProvider>
       </html>

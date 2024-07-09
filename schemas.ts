@@ -12,7 +12,7 @@ const hours = generateTimes(9,21,1)
 export const bookingSchema = z.object({
     name:requiredString,
     email:z.string().email(),
-    date:z.date().refine(data=>data > new Date(),{message:"Enter Valid Date Please"}),
+    date:z.date().refine(data=>data >= new Date(new Date().setHours(0,0,0,0)),{message:"Enter Valid Date Please"}),
     time:requiredString.refine(data=>hours.includes(data),{message:"Enter Valid Time Please"}),
     phone:phoneSchema,
     title:z.string().optional(),
