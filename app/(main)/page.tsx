@@ -24,7 +24,7 @@ const page = (props: Props) => {
   return (
     <div className="pb-12">
       {/* Hero section */}
-      <div className="relative pb-44">
+      <div className="relative pb-44 perspective">
         <div className="bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)] absolute inset-0 w-full h-full" />
         <Header />
         <Hero />

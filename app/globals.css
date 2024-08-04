@@ -70,6 +70,15 @@
     }
   }
 
+  .perspective{
+    perspective: 1000px;
+  }
+
+  .rotate-y-3d:hover {
+    transform: rotateX(60deg);
+  }
+
+
   @layer utilities {
     .bg-conical-gradient {
       background-image: conic-gradient(from 0deg, var(--tw-gradient-stops));
