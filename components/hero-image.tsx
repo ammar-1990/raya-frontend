@@ -7,7 +7,7 @@ type Props = {}
 
 const HeroImage = (props: Props) => {
 
-  const [rotation, setRotation] = useState(60); // Start with 60 degrees
+  const [rotation, setRotation] = useState(30); // Start with 60 degrees
   const imageRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -19,18 +19,16 @@ const HeroImage = (props: Props) => {
       const viewportHeight = window.innerHeight;
 
       // Calculate how far the element is from the center of the viewport
-      const elementCenterY = rect.top + rect.height / 2;
+    
       const viewportCenterY = viewportHeight / 2;
-      const distanceFromCenter = elementCenterY - viewportCenterY;
+ 
+ if(rect.top  <= viewportCenterY){
+  setRotation(0);
+ }else {
+  setRotation(30);
+ }
 
-      // Determine rotation based on the distance from the center
-      const maxDistance = viewportHeight / 2;
-      const newRotation = Math.max(
-        0,
-        Math.min(60, (distanceFromCenter / maxDistance) * 60)
-      );
-
-      setRotation(newRotation);
+  
     };
 
     window.addEventListener('scroll', handleScroll);
