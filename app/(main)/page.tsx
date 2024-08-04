@@ -14,6 +14,9 @@ import { LampContainer } from "@/components/lamp-effect";
 import Motion from "@/components/motion";
 import { Variants } from "framer-motion";
 import SheetButton from "@/components/sheet-button";
+import HeroImage from "@/components/hero-image";
+import ClientButton from "@/components/clien-button";
+import { WhatWeDo } from "@/components/what-we-do";
 
 type Props = {};
 export const revalidate = 0;
@@ -25,6 +28,7 @@ const page = (props: Props) => {
         <div className="bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)] absolute inset-0 w-full h-full" />
         <Header />
         <Hero />
+        <HeroImage />
       </div>
       {/* what we do */}
       <div id="services" className="pt-8">
@@ -82,9 +86,10 @@ const Services = async () => {
   });
   return (
     <section className="siteContainer">
-      <h2 className="text-center text-white text-2xl md:text-4xl tracking-widest">
-        Services
-      </h2>
+   <span className=" tracking-wider  py-1 px-2 border rounded-lg block mx-auto w-fit text-xs text-zinc-300 font-sans">Our Services</span>
+   <h2 className="mx-auto max-w-[400px] text-center text-3xl text-white capitalize mt-6">Transform Your Business with
+   NexFlow&apos;s AI Solutions</h2>
+   <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
       <ServiceFeed services={services} />
     </section>
   );
@@ -114,110 +119,6 @@ const Subscriptions = async () => {
   );
 };
 
-const WhatWeDo = () => {
-  const whatWeDo = [
-    {
-      label: "Discovery",
-      description:
-        "We meet with you to learn about your business, your goals, and your target audience.",
-      icon: <FaMagnifyingGlass size={26} />,
-    },
-    {
-      label: "Strategy",
-      description:
-        "We develop a customized marketing strategy that is based on your unique needs and goals.",
-      icon: <FaChess size={26} />,
-    },
-    {
-      label: "Execution",
-      description:
-        "We execute our strategy using the latest digital marketing tools and techniques.",
-      icon: <TbTargetArrow size={26} />,
-    },
-    {
-      label: "Measurement",
-      description:
-        "We track the results of our campaigns so that we can make adjustments as needed.",
-      icon: <FaRuler size={26} />,
-    },
-  ];
-  const containerVariants:Variants = {
-    hidden: { opacity: 1 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,delayChildren:0.4,
-        
-      },
-    },
-    
-  };
-  
-  const itemVariants:Variants = {
-    hidden: { opacity: 0,y:20  },
-    show: { opacity: 1,y:0 ,  },
-   
-  };
-  return (
-    <section className="siteContainer grid grid-cols-1 md:grid-cols-2 gap-10  md:gap-4 lg:gap-20">
-      <article className="flex flex-col gap-12">
-        <h3 className="text-white text-3xl capitalize">What We Do?</h3>
-        <p className="max-w-[400px] text-white/60 font-sans">
-          We believe that the best way to create successful marketing campaigns
-          is to work closely with our clients to understand their goals and
-          challenges.
-        </p>
-        <div className=" relative  rounded-3xl overflow-hidden  w-full aspect-video">
-          <Image
-            fill
-            alt="what we do"
-            src={"/wwd.png"}
-            className="object-cover"
-          />
-        </div>
-      </article>
-
-      <Motion 
-         variants={containerVariants}
-         initial="hidden"
-         whileInView="show"
-          viewport={{ once: true }}
-      className="space-y-4 flex flex-col justify-between">
-        {whatWeDo.map((el,i) => (
-          <div
-          key={el.label}
-          className="min-h-[100px]" >
-            <Motion  
-            
-        variants={itemVariants}
-          className="overflow-hidden"
-          ><WhatWeDoCard  whatWeDo={el} /></Motion>
-            </div>
-        ))}
-      </Motion>
-    </section>
-  );
-};
-
-const WhatWeDoCard = ({
-  whatWeDo,
-}: {
-  whatWeDo: { label: string; description: string; icon: ReactNode };
-}) => {
-  return (
-    <article className="flex  gap-4 ">
-      <div className="md:w-20  md:h-20 w-14 h-14 shrink-0 rounded-2xl flex items-center justify-center bg-gradient-to-b from-gradient_main-start to-gradient_main-end text-white ">
-        {whatWeDo.icon}
-      </div>
-      <div>
-        <h3 className="text-white text-2xl">{whatWeDo.label}</h3>
-        <p className="text-white/60 font-sans max-w-[400px] text-xs md:text-sm mt-0 md:mt-4">
-          {whatWeDo.description}
-        </p>
-      </div>
-    </article>
-  );
-};
 
 const Banner = () => {
   return (
@@ -248,7 +149,7 @@ const Banner = () => {
       </article>
       <article className="relative z-50">
 <p className="text-white font-sans text-xs sm:text-sm md:text-base">Ready to transform your digital dresence? Let&apos;s<br/> create magic together! book our services now!</p>
-<Button className="rounded-full text-black bg-white hover:bg-white/80 font-sans mt-6 md:px-12 md:py-6 px-8 py-4 md:text-xl ">Book a call</Button>
+<ClientButton title=" Book a call" className="" />
       </article>
     </section>
   );

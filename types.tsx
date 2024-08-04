@@ -13,10 +13,10 @@ import { $Enums } from "@prisma/client";
 
 
 export const iconsMapping: { [key in $Enums.Icons]: ReactNode } = {
-    SOFTWARE: <LiaLaptopCodeSolid strokeWidth={0.01} size={30} />,
-    AI: <Bot strokeWidth={1.5} size={25} />,
-    DESIGN: <Globe strokeWidth={1.5} size={25} />,
-    MARKETING: <Rocket strokeWidth={1.5} size={25} />,
+    SOFTWARE: <LiaLaptopCodeSolid strokeWidth={0.01} size={25} />,
+    AI: <Bot strokeWidth={1.5} size={20} />,
+    DESIGN: <Globe strokeWidth={1.5} size={20} />,
+    MARKETING: <Rocket strokeWidth={1.5} size={20} />,
   };
 
   

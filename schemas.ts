@@ -1,5 +1,6 @@
 import z from 'zod'
 import { generateTimes } from './lib/utils';
+import { Icons } from '@prisma/client';
 
 const requiredString = z.string().min(1,"Required")
 const phoneRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
@@ -18,3 +19,6 @@ export const bookingSchema = z.object({
     title:z.string().optional(),
     description:z.string().optional()
 })
+
+export type IconsType = keyof typeof Icons
+export const icons:IconsType[] = ["SOFTWARE","DESIGN","AI","MARKETING"] as const 
