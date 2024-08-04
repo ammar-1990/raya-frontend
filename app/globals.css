@@ -70,6 +70,12 @@
     }
   }
 
+  @layer utilities {
+    .bg-conical-gradient {
+      background-image: conic-gradient(from 0deg, var(--tw-gradient-stops));
+    }
+  }
+
   html {
     scroll-behavior: smooth
   }
