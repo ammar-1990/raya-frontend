@@ -53,6 +53,8 @@ export const WhatWeDo = () => {
       show: { opacity: 1,y:0 ,  },
      
     };
+
+    const images = ['/discovery.jpg','/strategy.jpg','/excution.jpg','/measurments.jpg']
     return (
   
       <section>
@@ -66,22 +68,23 @@ export const WhatWeDo = () => {
         <article className="flex flex-col gap-12">
       
       
-          <div className=" relative  rounded-3xl overflow-hidden  w-full aspect-square text-white">
-            {/* <Image
+          <Motion
+          key={theImage}
+          initial={{opacity:0,x:-20}}
+          animate={{opacity:1,x:0}}
+           className=" relative  rounded-3xl overflow-hidden  w-full aspect-square text-white">
+            <Image
               fill
               alt="what we do"
-              src={"/wwd.png"}
+              src={images[theImage]}
               className="object-cover"
-            /> */}
-            {theImage}
-          </div>
+            />
+           
+          </Motion>
         </article>
   
-        <Motion 
-           variants={containerVariants}
-           initial="hidden"
-           whileInView="show"
-            viewport={{ once: true }}
+        <div 
+        
         className="space-y-1 flex flex-col justify-between">
           {whatWeDo.map((el,index) => (
             <div
@@ -89,14 +92,14 @@ export const WhatWeDo = () => {
          
             key={el.label}
             className={cn("min-h-[100px] border border-zinc-700 rounded-lg p-5 cursor-pointer transition",index===theImage && 'border-gradient_main-start')} >
-              <Motion  
+              <div  
               
-          variants={itemVariants}
+    
             className="overflow-hidden"
-            ><WhatWeDoCard  whatWeDo={el} /></Motion>
+            ><WhatWeDoCard  whatWeDo={el} /></div>
               </div>
           ))}
-        </Motion>
+        </div>
       </div>
       </section>
    
