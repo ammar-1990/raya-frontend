@@ -64,7 +64,7 @@ export const WhatWeDo = () => {
      <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">  We believe that the best way to create successful marketing campaigns
             is to work closely with our clients to understand their goals and
             challenges.</p>
-     <div className="siteContainer grid grid-cols-1 md:grid-cols-2 gap-10  md:gap-4 lg:gap-20 mt-6">
+     <div className="siteContainer grid grid-cols-1 lg:grid-cols-2 gap-10  md:gap-4 lg:gap-20 mt-6">
         <article className="flex flex-col gap-12">
       
       
