@@ -38,7 +38,7 @@ const HeroImage = (props: Props) => {
     <div 
     ref={imageRef}
     style={{ transform: `rotateX(${rotation}deg)` }}
-    className='mx-auto max-w-[750px] w-[60%] 3xl:max-w-[1200px]      transition duration-500   overflow-hidden    aspect-[16/11] p-[1.7px] rounded-lg     hidden md:block z-[10] relative'>
+    className='mx-auto max-w-[750px] w-[60%] 3xl:max-w-[1200px]      transition duration-1000   overflow-hidden    aspect-[16/11] p-[1.7px] rounded-lg     hidden md:block z-[10] relative'>
         <div className='bg-gradient-to-t from-gradient_main-end       to-black -top-1/2 -left-1/2  absolute w-[200%] h-[200%] animate-spin-slow ' />
    
      
