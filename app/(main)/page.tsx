@@ -60,20 +60,20 @@ const page = (props: Props) => {
 export default page;
 
 const Hero = () => {
-  const words = ["better", "cute", "beautiful", "modern"];
+  const words = ["better", "cutting-edge", "beautiful", "modern"];
   return (
     <section className="px-6  flex flex-col  items-center relative  py-12 mt-12">
       <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold  text-center">
-        Crafting High-Performance Websites
+      Creating <span className="  inline-block text-start"><FlipWords words={words} /></span> Digital Solutions 
       </p>
       <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold lg:mt-8 mt-2 text-center">
-        with Stunning <span className="lg:min-w-[300px] min-w-[100px] inline-block text-start"><FlipWords words={words} /></span>
+      for Your Business Success 
       </p>
       <p className="text-white mt-6   lg:mt-12 font-sans text-xs sm:text-sm lg:text-lg text-center">
-        We build websites that drive results and help your business grow.
+      Crafting digital solutions that enhance performance and elevate your business. 
       </p>
       <p className="text-white    lg:mt-4 mt-1 font-sans  text-xs sm:text-sm lg:text-lg text-center">
-        No Calls. No BS.Just Results.
+      Results-Focused Approach.
       </p>
     <SheetButton/>
     </section>
@@ -88,8 +88,8 @@ const Services = async () => {
     <section className="siteContainer">
    <span className=" tracking-wider  py-1 px-2 border rounded-lg block mx-auto w-fit text-xs text-zinc-300 font-sans">Our Services</span>
    <h2 className="mx-auto max-w-[400px] text-center text-3xl text-white capitalize mt-6">Transform Your Business with
-   NexFlow&apos;s AI Solutions</h2>
-   <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+   our digital unique solutions</h2>
+   <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">Take your business to the next level with our unique digital solutions. We use the latest tech and creative ideas to boost your brand and help you grow</p>
       <ServiceFeed services={services} />
     </section>
   );
