@@ -61,9 +61,7 @@ export const WhatWeDo = () => {
            <span className=" tracking-wider  py-1 px-2 border rounded-lg block mx-auto w-fit text-xs text-zinc-300 font-sans">Why Us</span>
      <h2 className="mx-auto max-w-[400px] text-center text-3xl text-white capitalize mt-6">
    What We Do ?</h2>
-     <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">  We believe that the best way to create successful marketing campaigns
-            is to work closely with our clients to understand their goals and
-            challenges.</p>
+     <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">We create digital solutions that help your business grow. From software to marketing, <br/>we have you covered.</p>
      <div className="siteContainer grid grid-cols-1 lg:grid-cols-2 gap-10  md:gap-4 lg:gap-20 mt-6">
         <article className="flex flex-col gap-12">
       
