@@ -14,25 +14,25 @@ export const WhatWeDo = () => {
       {
         label: "Discovery",
         description:
-          "We meet with you to learn about your business, your goals, and your target audience.",
+          "We start by getting to know your business, your objectives, and the audience you want to reach.",
         icon: <FaMagnifyingGlass size={26} />,
       },
       {
         label: "Strategy",
         description:
-          "We develop a customized marketing strategy that is based on your unique needs and goals.",
+          "We craft a strategy that's specifically designed around your goals and requirements.",
         icon: <FaChess size={26} />,
       },
       {
-        label: "Execution",
+        label: "Action",
         description:
-          "We execute our strategy using the latest digital marketing tools and techniques.",
+          "We bring our strategy to life with the most up-to-date digital tools and techniques.",
         icon: <TbTargetArrow size={26} />,
       },
       {
-        label: "Measurement",
+        label: "Monitoring",
         description:
-          "We track the results of our campaigns so that we can make adjustments as needed.",
+          "We continuously track results to optimize our strategies and improve performance.",
         icon: <FaRuler size={26} />,
       },
     ];
