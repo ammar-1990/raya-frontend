@@ -60,11 +60,11 @@ const page = (props: Props) => {
 export default page;
 
 const Hero = () => {
-  const words = ["better", "cutting-edge", "beautiful", "modern"];
+  const words = ["better", "cutting-edge", "customized", "modern"];
   return (
     <section className="px-6  flex flex-col  items-center relative  py-12 mt-12">
       <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold  text-center">
-      Creating <span className="  inline-block text-start"><FlipWords words={words} /></span> Digital Solutions 
+      Creating <span className="inline-block text-start v"><FlipWords duration={1000} words={words} /></span> Digital Solutions 
       </p>
       <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold lg:mt-8 mt-2 text-center">
       for Your Business Success 
@@ -148,7 +148,7 @@ const Banner = () => {
         </p>
       </article>
       <article className="relative z-50">
-<p className="text-white font-sans text-xs sm:text-sm md:text-base">Ready to transform your digital dresence? Let&apos;s<br/> create magic together! book our services now!</p>
+<p className="text-white font-sans text-xs sm:text-sm md:text-base">Ready to transform your digital presence? Let&apos;s<br/> create magic together! book our services now!</p>
 <ClientButton title=" Book a call" className="" />
       </article>
     </section>
