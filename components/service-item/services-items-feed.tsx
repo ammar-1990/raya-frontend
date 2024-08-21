@@ -2,13 +2,14 @@ import { cn } from "@/lib/utils";
 import { ServiceItem } from "@prisma/client";
 import Image from "next/image";
 import React from "react";
+import prisma from "@/lib/prisma"
 
 type Props = {
   slug: string;
 };
 
 const ServiceItemsFeed = async ({ slug }: Props) => {
-  const serviceItems = await prisma?.serviceItem.findMany({
+  const serviceItems = await prisma.serviceItem.findMany({
     where: {
       service: {
         slug,

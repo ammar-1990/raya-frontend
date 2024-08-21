@@ -10,26 +10,26 @@ type Props = {
 
 export const revalidate = 0
 
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const service = await prisma.service.findUnique({
-//     where: {
-//       slug: params.serviceSlug,
-//     },
-//     select: {
-//       seoTitle: true,
-//       seoDescription: true,
-//     },
-//   });
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const service = await prisma.service.findUnique({
+    where: {
+      slug: params.serviceSlug,
+    },
+    select: {
+      seoTitle: true,
+      seoDescription: true,
+    },
+  });
 
-//   return {
-//     title: service?.seoTitle.toUpperCase(),
-//     description: service?.seoDescription,
-//     openGraph: {
-//       title: service?.seoTitle.toUpperCase(),
-//       description: service?.seoDescription,
-//     },
-//   };
-// }
+  return {
+    title: service?.seoTitle.toUpperCase(),
+    description: service?.seoDescription,
+    openGraph: {
+      title: service?.seoTitle.toUpperCase(),
+      description: service?.seoDescription,
+    },
+  };
+}
 
 const page = async ({ params }: Props) => {
   const service = await prisma.service.findUnique({
