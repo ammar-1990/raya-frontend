@@ -8,6 +8,8 @@ type Props = {
   params: { serviceSlug: string };
 };
 
+export const revalidate = 0
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = await prisma.service.findUnique({
     where: {

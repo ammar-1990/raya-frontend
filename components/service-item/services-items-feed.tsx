@@ -39,9 +39,9 @@ return  <div style={{top:(index+1) * 30}} className="grid grid-cols-1 md:grid-co
 
     </div>
     <div className=" col-span-1   relative aspect-square overflow-hidden">
-    {service.image && <Image src={service.image} alt="img" fill className="object-cover" />}
-    <div className="absolute w-full h-full top-0 left-0 bg-black/80 backdrop-blur-sm" />
-{service.image && <Image src={service.image} alt="img" fill className="object-contain max-w-[300px] mx-auto" />}
+    {service.image && <Image src={service.image} alt="img" fill className="object-cover  " />}
+    <div className="absolute w-full h-full top-0 left-0 bg-black/80 backdrop-blur-sm  " />
+{service.image && <Image src={service.image} alt="img" fill className="object-contain max-w-[300px] mx-auto  " />}
 
 
     </div>
