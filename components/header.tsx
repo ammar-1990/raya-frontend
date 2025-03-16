@@ -17,10 +17,10 @@ const Header = (props: Props) => {
     <div className='hidden md:block'>
     <NavLinks/>
     </div>
-
+{/* 
     <div className='md:hidden block'>
       <HamburgerSheet/>
-    </div>
+    </div> */}
    
 </div>
     </div>

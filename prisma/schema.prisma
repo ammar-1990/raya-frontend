@@ -82,7 +82,7 @@ model Booking {
   phone String
 
   title String?
-  description String?
+  descriptio String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -92,6 +92,7 @@ model ServiceItem {
   id             String  @id @default(uuid())
   label          String
   description    String?
+  bulletPoints   String[] @default([])
   image          String
   slug           String  @unique
   seoTitle       String
@@ -130,8 +131,8 @@ model Subscription {
   type         SubscriptionsPlans @default(BASIC)
   bulletPoints Json[]
 
-  price       Float
-  label       String?
+  price Float
+  label String?
   description String?
 
   createdAt DateTime @default(now())

@@ -21,11 +21,7 @@ const pathname = usePathname()
         {
         label:"Contact us",
       
-      fn:(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
-        e.preventDefault();
-       setOpen(true)
-       console.log(open)
-      }
+  
   },
   //       {
   //       label:"Pricing",
@@ -42,13 +38,15 @@ const pathname = usePathname()
     <nav>
         <ul className='flex items-center gap-16 text-white text-sm'>
             {links.map((link)=>{
-              if(link.fn) return <li key={link.label}>
-              <Link href={''} onClick={(e)=>link.fn(e)}  className='tracking-wider font-sans'>{link.label}</Link>
-          </li>
+             
               return <li key={link.label}>
-                <Link href={link.link}   className='tracking-wider font-sans'>{link.label}</Link>
+                <Link href={link.link ?? ''}   className='tracking-wider font-sans'>{link.label}</Link>
             </li>})}
-            <li><SiteButton className='tracking-wider'>Get Started</SiteButton></li>
+            <li><SiteButton fn={(e: React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
+        e.preventDefault();
+       setOpen(true)
+       console.log(open)
+      }} className='tracking-wider'>Get Started</SiteButton></li>
         </ul>
     </nav>
   )

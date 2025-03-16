@@ -2,11 +2,13 @@ import React, { HTMLAttributes } from 'react'
 import { Button } from './ui/button'
 import { cn } from '@/lib/utils'
 
-type Props = {containerStyle?:string} & HTMLAttributes<HTMLButtonElement>
+type Props = {containerStyle?:string,fn:(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void} & HTMLAttributes<HTMLButtonElement>
 
-const SiteButton = ({className,children,containerStyle,...rest}: Props) => {
+const SiteButton = ({className,children,containerStyle,fn,...rest}: Props) => {
   return (
-    <div className={cn('relative group',containerStyle)}>
+    <div className={cn('relative group',containerStyle)}
+    onClick={(e)=>fn(e)} 
+    >
         <Button
     variant={'ghost'}
     className={cn('bg-transparent hover:bg-backGround hover:text-white rounded-full border w-[126px] border-neutral-600 relative bg-backGround z-30  ',className)}
