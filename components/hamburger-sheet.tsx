@@ -89,7 +89,7 @@ const HamburgerSheet = (props: Props) => {
                         y: 0,
                         transition: { delay: 0.3 + 0.1 * index },
                       }}
-                    > <SiteButton>{link.label}</SiteButton></motion.span> 
+                    > <SiteButton fn={()=>{}}>{link.label}</SiteButton></motion.span> 
               </SheetClose>
             );
           })}
