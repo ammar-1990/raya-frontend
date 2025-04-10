@@ -1,6 +1,5 @@
-
-
- 
+import Footer from "@/components/Footer";
+import Header from "@/components/header";
 import React, { ReactNode } from "react";
 
 type Props = { children: ReactNode };
@@ -8,9 +7,9 @@ type Props = { children: ReactNode };
 const layout = ({ children }: Props) => {
   return (
     <div className="bg-backGround min-h-screen ">
-     
-      
+        <Header />
       <div>{children}</div>
+      <Footer />
     </div>
   );
 };

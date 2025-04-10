@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import ModalProvide from "@/providers/modal-providers";
 import { ContactProvider } from "@/contexts/contact-context";
 import { Toaster } from "@/components/ui/sonner"
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const myFont = localFont({
   src: "../fonts/CalSans-SemiBold.woff",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <ContactProvider>
           <body className={cn(myFont.className, inter.className)}>
             {children}
+     
             <ModalProvide />
          <Toaster richColors />
           </body>

@@ -15,7 +15,7 @@ const pathname = usePathname()
     const links = [
         {
         label:"Services",
-        link:"#services",
+        link:"/#services",
         active:pathname==="#services"
   },
         {

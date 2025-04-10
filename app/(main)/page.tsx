@@ -17,6 +17,7 @@ import SheetButton from "@/components/sheet-button";
 import HeroImage from "@/components/hero-image";
 import ClientButton from "@/components/clien-button";
 import { WhatWeDo } from "@/components/what-we-do";
+import SectionBadge from "@/components/SectionBadge";
 
 type Props = {};
 export const revalidate = 0;
@@ -26,7 +27,7 @@ const page = (props: Props) => {
       {/* Hero section */}
       <div className="relative pb-44 perspective">
         <div className="bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)] absolute inset-0 w-full h-full" />
-        <Header />
+      
         <Hero />
         <HeroImage />
       </div>
@@ -86,7 +87,7 @@ const Services = async () => {
   });
   return (
     <section className="siteContainer">
-   <span className=" tracking-wider  py-1 px-2 border rounded-lg block mx-auto w-fit text-xs text-zinc-300 font-sans">Our Services</span>
+   <SectionBadge title="Our Services" />
    <h2 className="mx-auto max-w-[400px] text-center text-3xl text-white capitalize mt-6">Transform Your Business with
    our digital unique solutions</h2>
    <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">Take your business to the next level with our unique digital solutions. We use the latest tech and creative ideas to boost your brand and help you grow</p>

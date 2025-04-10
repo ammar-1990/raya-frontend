@@ -41,9 +41,7 @@ const page = async ({ params }: Props) => {
   });
   return (
     <div className="  min-h-screen  pt-24 ">
-      <Link href={'/'} className="top-4 left-4 rounded-full bg-white w-12 h-12 fixed flex items-center justify-center z-50">
-      <Home/>
-      </Link>
+   
       <Heading
         title={service?.label || "Service"}
         description={service?.description || ''}
