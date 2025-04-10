@@ -63,11 +63,7 @@ export default async function Footer() {
                 About Us
               </Link>
             </li>
-            <li>
-              <Link href="/why-us" className="hover:text-white transition font-sans">
-                Why YUMA
-              </Link>
-            </li>
+         
           </ul>
         </div>
 
