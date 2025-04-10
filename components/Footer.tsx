@@ -96,7 +96,7 @@ export default async function Footer() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-text">
+      <div className="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-text font-sans">
         © 2025 YUMA. Crafted with purpose.
       </div>
     </footer>
