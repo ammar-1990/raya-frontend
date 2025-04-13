@@ -16,8 +16,8 @@ const myFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Raya",
-  description: "Grow your busyness",
+  title: "YUMA",
+  description: "Grow your business",
 };
 
 export default function RootLayout({

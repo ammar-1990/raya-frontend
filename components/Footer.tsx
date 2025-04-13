@@ -73,7 +73,7 @@ export default async function Footer() {
             Contact
           </h3>
           <p className="text-sm text-text font-sans">yuma.agency.software@gmail.com</p>
-          <p className="text-sm text-text mt-1 font-sans">+971 50 000 0000</p>
+          {/* <p className="text-sm text-text mt-1 font-sans">+971 50 000 0000</p> */}
 
           <div className="flex space-x-4 mt-4 ">
         

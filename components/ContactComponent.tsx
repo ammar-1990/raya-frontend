@@ -20,17 +20,17 @@ const ContactComponent = (props: Props) => {
         </section>
 
         {/* Contact Cards (Horizontal) */}
-        <section className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <section className="flex flex-col md:flex-row items-center   gap-6">
           <ContactCard
             icon={<Mail className="w-5 h-5 text-white" />}
             title="Email"
             value="yuma.agency.software@gmail.com"
           />
-          <ContactCard
+          {/* <ContactCard
             icon={<Phone className="w-5 h-5 text-white" />}
             title="Phone"
             value="+971 50 000 0000"
-          />
+          /> */}
           <ContactCard
             icon={<MapPin className="w-5 h-5 text-white" />}
             title="Location"
@@ -70,7 +70,7 @@ function ContactCard({
     value: string;
   }) {
     return (
-      <div className="bg-[#1c1c1c] w-full md:w-1/3 p-6 rounded-xl flex items-start gap-4 hover:shadow-xl transition">
+      <div className="bg-[#1c1c1c] w-full md:w-1/3 p-6 rounded-xl flex items-start gap-4 hover:shadow-xl transition flex-1">
         <div className="bg-white/10 p-2 rounded-md">{icon}</div>
         <div>
           <p className="text-sm font-semibold text-white mb-1">{title}</p>
