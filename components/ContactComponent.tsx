@@ -14,7 +14,7 @@ const ContactComponent = (props: Props) => {
         {/* Page Header */}
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Let’s Connect</h1>
-          <p className="text-lg text-gray-400 max-w-xl mx-auto">
+          <p className="text-lg text-gray-400 max-w-xl mx-auto font-sans">
             Whether you have a project in mind or just want to chat — we’re here.
           </p>
         </section>
@@ -24,7 +24,7 @@ const ContactComponent = (props: Props) => {
           <ContactCard
             icon={<Mail className="w-5 h-5 text-white" />}
             title="Email"
-            value="hello@yuma.agency"
+            value="yuma.agency.software@gmail.com"
           />
           <ContactCard
             icon={<Phone className="w-5 h-5 text-white" />}
@@ -74,7 +74,7 @@ function ContactCard({
         <div className="bg-white/10 p-2 rounded-md">{icon}</div>
         <div>
           <p className="text-sm font-semibold text-white mb-1">{title}</p>
-          <p className="text-sm text-gray-400 break-words">{value}</p>
+          <p className="text-sm text-gray-400 break-words font-sans">{value}</p>
         </div>
       </div>
     );

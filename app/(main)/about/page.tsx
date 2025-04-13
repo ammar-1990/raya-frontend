@@ -19,7 +19,7 @@ export default function AboutPage() {
         {/* Header */}
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Who We Are</h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-sans">
             At <span className="text-white font-semibold">YUMA</span>, we blend technology, strategy, and design to build custom digital experiences that drive real results.
             We work with startups and enterprises to craft products that are fast, scalable, and future-ready.
           </p>
@@ -60,7 +60,7 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Let’s Build Something Great</h2>
-          <p className="text-gray-400 mb-8">Ready to scale your ideas with smart, custom software?</p>
+          <p className="text-gray-400 mb-8 font-sans">Ready to scale your ideas with smart, custom software?</p>
           <Link href="/contact">
             <button className="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">
               Get in Touch
@@ -90,7 +90,7 @@ function Card({
         <div className="bg-white/10 p-2 rounded-md">{icon}</div>
         <h3 className="text-lg font-semibold text-white">{title}</h3>
       </div>
-      <p className="text-sm text-gray-400 leading-relaxed">{children}</p>
+      <p className="text-sm text-gray-400 leading-relaxed font-sans">{children}</p>
     </div>
   );
 }
@@ -110,7 +110,7 @@ function ProcessCard({
         <div className="bg-white/10 p-1.5 rounded-md">{icon}</div>
         <h4 className="text-sm font-semibold text-white uppercase tracking-wide">{title}</h4>
       </div>
-      <p className="text-sm text-gray-400">{children}</p>
+      <p className="text-sm text-gray-400 font-sans">{children}</p>
     </div>
   );
 }

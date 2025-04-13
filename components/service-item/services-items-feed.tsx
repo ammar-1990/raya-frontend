@@ -21,7 +21,7 @@ const ServiceItemsFeed = async ({ slug }: Props) => {
       {serviceItems?.map((service, index) => {
         return <ItemCard key={service.id} service={service} index={index} />;
       })}
-      <div className="w-full h-[900px]" />
+    
     </div>
   );
 };
@@ -38,7 +38,7 @@ const ItemCard = ({
   return (
     <div
       style={{ top: (index + 1) * 30 }}
-      className="grid grid-cols-1 md:grid-cols-2 border max-w-[1100px] w-full mx-auto border-zinc-800 rounded-md overflow-hidden sticky  backdrop-blur-lg bg-backGround/60"
+      className="grid grid-cols-1 md:grid-cols-2 border max-w-[1100px] w-full mx-auto border-zinc-800 rounded-md overflow-hidden   backdrop-blur-lg bg-backGround/60"
     >
       <div
         className={cn(
