@@ -78,23 +78,23 @@ model Booking {
   name  String
   email String
   date  DateTime
-  time String
+  time  String
   phone String
 
-  title String?
-  descriptio String?
+  title       String?
+  description String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model ServiceItem {
-  id             String  @id @default(uuid())
+  id             String   @id @default(uuid())
   label          String
   description    String?
   bulletPoints   String[] @default([])
   image          String
-  slug           String  @unique
+  slug           String   @unique
   seoTitle       String
   seoDescription String
   initialPrice   Float
@@ -131,12 +131,43 @@ model Subscription {
   type         SubscriptionsPlans @default(BASIC)
   bulletPoints Json[]
 
-  price Float
-  label String?
+  price       Float
+  label       String?
   description String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Portfolio {
+  id String @id @default(uuid())
+
+  title String
+  description String
+  escerpt String
+  mainImage String
+
+  seoTitle String
+  setDescription String
+
+  problem String
+  solution String
+
+  firstExplainText String?
+  firstExplainImage String?
+   secondExplainText String?
+  secondExplainImage String?
+   thirdExplainText String?
+  thirdExplainImage String?
+   fourthExplainText String?
+  fourthExplainImage String?
+
+
+  startDate DateTime 
+  endDate   DateTime 
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
 }
 
 enum Icons {
