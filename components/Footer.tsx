@@ -4,6 +4,7 @@ import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa";
 import { FACEBOOK, INSTAGRAM, TIKTOK } from "@/types";
+import Logo from "./Logo";
 
 export default async function Footer() {
   const services = await prisma.service.findMany({
@@ -16,9 +17,7 @@ export default async function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
         {/* Logo + Tagline */}
         <div className="md:col-span-2">
-          <h2 className="text-3xl font-extrabold text-white tracking-tight mb-4">
-            YUMA
-          </h2>
+          <Logo width="w-24"/>
           <p className="text-sm text-text leading-relaxed font-sans">
             We craft tailored software, seamless experiences, and smart
             automation — empowering brands to thrive in the digital era.

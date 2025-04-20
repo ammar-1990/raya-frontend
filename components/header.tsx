@@ -3,6 +3,7 @@ import NavLinks from './navLinks'
 import HamburgerSheet from './hamburger-sheet'
 import Image from 'next/image'
 import Link from 'next/link'
+import Logo from './Logo'
 
 type Props = {}
 
@@ -12,9 +13,7 @@ const Header = (props: Props) => {
 <div className='siteContainer flex items-center justify-between h-[72px]'>
     {/* logo */}
     <Link href={'/'}>
-    <div className='w-12 aspect-video relative cursor-pointer'>
-<span className='text-white font-[600] text-3xl'>YUMA</span>
-    </div>
+<Logo/>
     </Link>
 
 
