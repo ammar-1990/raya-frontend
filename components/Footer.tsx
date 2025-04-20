@@ -1,8 +1,9 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
-import { FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa";
+import { FACEBOOK, INSTAGRAM, TIKTOK } from "@/types";
 
 export default async function Footer() {
   const services = await prisma.service.findMany({
@@ -77,15 +78,16 @@ export default async function Footer() {
 
           <div className="flex space-x-4 mt-4 ">
         
-              <Link href="https://twitter.com/yourhandle" target="_blank">
+              <Link href={TIKTOK} target="_blank">
               <FaTiktok className="hover:text-white  text-text size-6" />
               </Link>
-              <Link href="https://instagram.com/yourhandle" target="_blank">
+              <Link href={INSTAGRAM} target="_blank">
                 <FaInstagram className="hover:text-[#E1306C] size-6 text-text" />
               </Link>
-              <Link href="https://youtube.com/@yourchannel" target="_blank">
-              <FaYoutube className="hover:text-red-600 transition size-6 text-text" />
+              <Link href={FACEBOOK} target="_blank">
+                <FaFacebook className="hover:text-blue-600 size-6 text-text" />
               </Link>
+              
       
           </div>
         </div>

@@ -25,3 +25,10 @@ export const colorsMapping: { [key in $Enums.Colors]: string } = {
   LIGHT_PINK: "bg-[#FFDED4]",
   LIGHT_YELLOW: "bg-[#FFEED4]",
 } as const;
+
+
+
+
+export const INSTAGRAM = 'https://www.instagram.com/yumaagency_/'
+export const TIKTOK = 'https://www.tiktok.com/@yumaagency_'
+export const FACEBOOK = 'https://www.facebook.com/share/1AYmEph9ph/?mibextid=wwXIfr'
