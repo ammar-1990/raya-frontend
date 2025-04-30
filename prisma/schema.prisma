@@ -142,29 +142,28 @@ model Subscription {
 model Portfolio {
   id String @id @default(uuid())
 
-  title String
+  title       String
   description String
-  escerpt String
-  mainImage String
+  escerpt     String
+  mainImage   String
+  slug         String @unique
+  seoTitle       String
+  seoDescription String
 
-  seoTitle String
-  setDescription String
-
-  problem String
+  problem  String
   solution String
 
-  firstExplainText String?
-  firstExplainImage String?
-   secondExplainText String?
+  firstExplainText   String?
+  firstExplainImage  String?
+  secondExplainText  String?
   secondExplainImage String?
-   thirdExplainText String?
-  thirdExplainImage String?
-   fourthExplainText String?
+  thirdExplainText   String?
+  thirdExplainImage  String?
+  fourthExplainText  String?
   fourthExplainImage String?
 
-
-  startDate DateTime 
-  endDate   DateTime 
+  startDate DateTime
+  endDate   DateTime
 
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())

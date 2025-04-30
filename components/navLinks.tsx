@@ -18,6 +18,11 @@ const NavLinks = (props: Props) => {
       active: pathname === "#services",
     },
     {
+      label: "Portfolio",
+      link: "/portfolio",
+     
+    },
+    {
       label: "About",
       link: "/about",
     },
