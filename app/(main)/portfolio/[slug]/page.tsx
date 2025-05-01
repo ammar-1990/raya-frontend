@@ -41,13 +41,15 @@ const page = async ({ params: { slug } }: Props) => {
     },
   ];
   return (
-    <div className="siteContainer min-h-screen pb-28">
+    <div className=" min-h-screen pb-28">
       {/* header */}
       <div className="">
     <Header firstWord={portfolio.title} secondWord="Project" descriptio={portfolio.escerpt} />
       </div>
-      {/* image */}
-      <div className="relative aspect-video w-full mt-12">
+   
+      <div className="siteContainer">
+           {/* image */}
+      <div className="relative aspect-video  mt-12 ">
         <Image
           fill
           className="object-cover"
@@ -56,7 +58,7 @@ const page = async ({ params: { slug } }: Props) => {
         />
       </div>
       {/* problem and solution */}
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-20 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-20 gap-8 ">
         {problemSolution.map((item, index) => (
           <div className="" key={index}>
             <h3 className="text-[#949494]">{item.title}</h3>
@@ -67,7 +69,7 @@ const page = async ({ params: { slug } }: Props) => {
         ))}
       </div>
       {/* description */}
-      <div className="grid grid-cols-1 md:grid-cols-5 mt-20 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-5 mt-20 gap-8 ">
         <p className="col-span-5 md:col-span-4 text-white font-sans text-md">
           {portfolio.description}
         </p>
@@ -82,7 +84,7 @@ const page = async ({ params: { slug } }: Props) => {
         </div>
       </div>
       {/* explaination */}
-      <div className="flex flex-col gap-12 mt-28">
+      <div className="flex flex-col gap-12 mt-28 ">
         {expainations.map(({ description, image }, index) => {
           if (description && image) return <div key={index} className="flex gap-2 flex-col w-full  ">
             <div className="flex items-center gap-1">
@@ -99,7 +101,7 @@ const page = async ({ params: { slug } }: Props) => {
         })}
       </div>
       {/* portfolios */}
-      <div className="mt-12">
+      <div className="mt-12 ">
         <div className="flex mb-3 items-center gap-2">
           <span className="text-[#FFFFFF40] font-sans text-xs">See Also</span>
             <div className="flex-1 h-[0.5px] bg-[#FFFFFF40]" />
@@ -108,6 +110,8 @@ const page = async ({ params: { slug } }: Props) => {
   <PortfolioFeed  id={portfolio.id}/>
 </Suspense>
       </div>
+      </div>
+  
     </div>
   );
 };
