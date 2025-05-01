@@ -14,8 +14,8 @@ type Props = {
 
 const Header = ({ descriptio, firstWord, secondWord, children }: Props) => {
   return (
-    <header className="pt-6 ">
-      <div className="   bg-[#1F0144] backdrop-blur-md rounded-2xl  min-h-[400px] py-3 px-8 siteContainer">
+    <header className="pt-6 siteContainer">
+      <div className="   bg-[#1F0144] backdrop-blur-md rounded-2xl  min-h-[400px] py-3 px-8 ">
         <div className=" ">
           {/* header part */}
           <div className="flex items-center justify-between">
