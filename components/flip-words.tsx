@@ -80,7 +80,7 @@ export const FlipWords = ({
               delay: index * 0.08,
               duration: 0.4,
             }}
-            className={cn("inline-block bg-gradient-to-b from-gradient_main-start from-40% to bg-gradient_main-end bg-clip-text text-transparent ",index===0 && 'capitalize')}
+              className={cn("inline-block text-[#8338EC] ",index===0 && 'capitalize')}
           >
             {letter}
           </motion.span>
@@ -89,3 +89,6 @@ export const FlipWords = ({
     </AnimatePresence>
   );
 };
+
+
+//bg-gradient-to-b from-gradient_main-start from-40% to bg-gradient_main-end bg-clip-text text-transparent

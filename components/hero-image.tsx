@@ -20,7 +20,7 @@ const HeroImage = (props: Props) => {
 
       // Calculate how far the element is from the center of the viewport
     
-      const viewportPointY = 35*viewportHeight/100 ;
+      const viewportPointY = viewportHeight*0.6 ;
  
  if(rect.top  <= viewportPointY){
   setRotation(0);

@@ -10,17 +10,21 @@ const SiteButton = ({className,children,containerStyle,fn,...rest}: Props) => {
     onClick={(e)=>fn(e)} 
     >
         <Button
-    variant={'ghost'}
-    className={cn('bg-transparent hover:bg-backGround hover:text-white rounded-full border w-[126px] border-neutral-600 relative bg-backGround z-30  ',className)}
+   
+    style={{background:'linear-gradient(to right, #8338EC,#B923FF)'}}
+    className={cn('rounded-full p-0.5 flex items-center justify-center',className)}
     >
-      
+      <div className='bg-[#1E0044] w-[98%] h-[99%] flex items-center justify-center rounded-full px-4 py-1 text-inherit leading-none overflow-hidden'>
+      {children}
+      </div>
       
 
        
-        {children}</Button>
-    <span className='absolute right-0 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_main-start  w-20 h-12 -translate-y-[50%] blur-md transition z-0 group-hover:blur-lg'/>
-    <span className='absolute -right-1 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_main-start  w-8 h-8 -translate-y-[68%] blur-[12px] transition z-0 group-hover:blur-[20px] '/>
-    <span className='absolute right-0 top-1/2 rounded-full  bg-gradient-to-r from-gradient_blur-start to-gradient_main-start  w-8 h-8 -translate-y-[70%] blur-[4px] transition z-0 group-hover:blur-[10px]'/>
+      </Button>
+      <div className="absolute -inset-[0.5px] z-[-1] blur-[10px] rounded-full opacity-60"
+     style={{
+       background: "linear-gradient(to right, #8338EC, #B923FF)"
+     }} />
     </div>
     
   )

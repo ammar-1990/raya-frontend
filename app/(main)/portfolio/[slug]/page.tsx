@@ -1,7 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import prisma from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Header from "@/components/header";
+import PortfolioFeed from "@/components/PortfolioFeed";
 
 type Props = {
   params: { slug: string };
@@ -41,14 +43,8 @@ const page = async ({ params: { slug } }: Props) => {
   return (
     <div className="siteContainer min-h-screen pb-28">
       {/* header */}
-      <div className="mt-12">
-        <h1 className="flex items-center text-5xl font-sans font-[800] text-[#949494] gap-3">
-          {portfolio.title}{" "}
-          <span className="text-gradient_blur-end">Project</span>
-        </h1>
-        <p className="text-xs text-[#949494] font-sans mt-3">
-          {portfolio.escerpt}
-        </p>
+      <div className="">
+    <Header firstWord={portfolio.title} secondWord="Project" descriptio={portfolio.escerpt} />
       </div>
       {/* image */}
       <div className="relative aspect-video w-full mt-12">
@@ -77,7 +73,7 @@ const page = async ({ params: { slug } }: Props) => {
         </p>
         <div className="col-span-5 md:col-span-1">
           <div className="flex items-center gap-1 ">
-            <span className="text-[#949494] text-xs font-sans">YEAR</span>
+            <span className="text-[#949494] text-xs font-sans text-[9px]">YEAR</span>
             <span className="h-[1px] flex-1 bg-[#949494]"></span>
           </div>
           <span className="text-sm font-sans text-[#949494]">
@@ -90,7 +86,7 @@ const page = async ({ params: { slug } }: Props) => {
         {expainations.map(({ description, image }, index) => {
           if (description && image) return <div key={index} className="flex gap-2 flex-col w-full  ">
             <div className="flex items-center gap-1">
-                <span className="text-xs font-sans text-[#333333]">{index + 1}</span>
+                <span className="text-xs font-sans text-[#333333]">{String(index + 1).padStart(2,'0')}</span>
                 <div className="flex-1 h-[1px] bg-[#333333] "></div>
             </div>
             {/* image */}
@@ -101,6 +97,16 @@ const page = async ({ params: { slug } }: Props) => {
             <p className="text-[#FFFFFF80] text-xs font-sans">{description}</p>
           </div>;
         })}
+      </div>
+      {/* portfolios */}
+      <div className="mt-12">
+        <div className="flex mb-3 items-center gap-2">
+          <span className="text-[#FFFFFF40] font-sans text-xs">See Also</span>
+            <div className="flex-1 h-[0.5px] bg-[#FFFFFF40]" />
+          </div>
+<Suspense>
+  <PortfolioFeed  id={portfolio.id}/>
+</Suspense>
       </div>
     </div>
   );

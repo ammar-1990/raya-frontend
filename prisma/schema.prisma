@@ -162,6 +162,8 @@ model Portfolio {
   fourthExplainText  String?
   fourthExplainImage String?
 
+  color String?
+
   startDate DateTime
   endDate   DateTime
 

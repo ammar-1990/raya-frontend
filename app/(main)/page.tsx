@@ -5,7 +5,7 @@ import React, { ReactNode } from "react";
 import ServiceCard from "@/components/service-card";
 import ServiceFeed from "@/components/service-feed";
 import { FlipWords } from "@/components/flip-words";
-import Header from "@/components/header";
+
 import SubscriptionCard from "@/components/subscription-card";
 import Image from "next/image";
 import { FaChess, FaMagnifyingGlass, FaRuler } from "react-icons/fa6";
@@ -18,35 +18,38 @@ import HeroImage from "@/components/hero-image";
 import ClientButton from "@/components/clien-button";
 import { WhatWeDo } from "@/components/what-we-do";
 import SectionBadge from "@/components/SectionBadge";
+import Header from "@/components/header";
 
 type Props = {};
 export const revalidate = 0;
 const page = (props: Props) => {
   return (
-    <div className="pb-12">
-      {/* Hero section */}
-      <div className="relative pb-44 perspective">
-        <div className="bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)] absolute inset-0 w-full h-full" />
-      
+    <div className="">
+      <Header descriptio="We build websites that drive results and help your business grow.">
         <Hero />
+      </Header>
+      {/* Hero section */}
+      <div className="relative pb-44 perspective mt-12">
+        <div className="bg-dot-white/[0.2]  [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)] absolute inset-0 w-full h-full" />
         <HeroImage />
       </div>
-      {/* what we do */}
-      <div id="services" className="pt-8">
-      <Services />
-      </div>
       {/* Services */}
-      <div  className="sm:mt-44 mt-32 pt-8">
-      <WhatWeDo />
-      
+      <div id="services" className="pt-8 -mt-20">
+        <Services />
       </div>
+      {/* what we do */}
+      <div className="sm:mt-20 mt-32 pt-8">
+        <WhatWeDo />
+      </div>
+
+
+
       {/* Subscriptions */}
       {/* <div className="">
         <LampContainer className="">
           <div className="relative z-50">
           <Subscriptions />
-          </div>
-       
+          </div>   
         </LampContainer>
   
       </div> */}
@@ -63,20 +66,23 @@ export default page;
 const Hero = () => {
   const words = ["better", "cutting-edge", "customized", "modern"];
   return (
-    <section className="px-6  flex flex-col  items-center relative  py-12 mt-12">
-      <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold  text-center">
-      Creating <span className="inline-block text-start v"><FlipWords duration={1000} words={words} /></span> Digital Solutions 
+    <section className="  flex flex-col items-center  md:items-start relative   ">
+      <p
+        className="text-[24px] sm:text-4xl  lg:text-4xl 
+       3xl:text-7xl tracking-wide  font-bold  text-center text-[#E9DEFF]"
+      >
+        Creating{" "}
+        <span className="inline-block text-center text-[#E9DEFF]">
+          <FlipWords duration={1000} words={words} />
+        </span>{" "}
+        Digital Solutions
       </p>
-      <p className="text-[24px] sm:text-4xl  lg:text-5xl xl:text-6xl 3xl:text-7xl tracking-wide text-white font-bold lg:mt-8 mt-2 text-center">
-      for Your Business Success 
+      <p
+        className="text-[24px] sm:text-4xl  lg:text-4xl 
+       3xl:text-7xl tracking-wide  font-bold text-[#E9DEFF] lg:mt-2 mt-2 text-center"
+      >
+        for Your Business Success
       </p>
-      <p className="text-white mt-6   lg:mt-12 font-sans text-xs sm:text-sm lg:text-lg text-center">
-      Crafting digital solutions that enhance performance and elevate your business. 
-      </p>
-      <p className="text-white    lg:mt-4 mt-1 font-sans  text-xs sm:text-sm lg:text-lg text-center">
-      Results-Focused Approach.
-      </p>
-    <SheetButton/>
     </section>
   );
 };
@@ -87,10 +93,15 @@ const Services = async () => {
   });
   return (
     <section className="siteContainer">
-   <SectionBadge title="Our Services" />
-   <h2 className="mx-auto max-w-[400px] text-center text-3xl text-white capitalize mt-6">Transform Your Business with
-   our digital unique solutions</h2>
-   <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">Take your business to the next level with our unique digital solutions. We use the latest tech and creative ideas to boost your brand and help you grow</p>
+      <SectionBadge title="Our Services" />
+      <h2 className="mx-auto max-w-[400px] text-center text-3xl text-white  capitalize mt-6">
+        Transform Your Business with our digital unique solutions
+      </h2>
+      <p className="text-zinc-400 text-xs max-w-[500px] px-3 mt-3 mx-auto text-center font-sans">
+        Take your business to the next level with our unique digital solutions.
+        We use the latest tech and creative ideas to boost your brand and help
+        you grow
+      </p>
       <ServiceFeed services={services} />
     </section>
   );
@@ -120,7 +131,6 @@ const Subscriptions = async () => {
   );
 };
 
-
 const Banner = () => {
   return (
     <section className="relative md:aspect-video max-h-[371px] w-full rounded-xl bg-[#513EF5] overflow-hidden gap-8 md:gap-12 lg:gap-24 grid grid-cols-1 md:grid-cols-2 items-center p-8 lg:px-20 sm:px-12 px-6">
@@ -149,8 +159,11 @@ const Banner = () => {
         </p>
       </article>
       <article className="relative z-50">
-<p className="text-white font-sans text-xs sm:text-sm md:text-base">Ready to transform your digital presence? Let&apos;s<br/> create magic together! book our services now!</p>
-<ClientButton title=" Book a call" className="" />
+        <p className="text-white font-sans text-xs sm:text-sm md:text-base">
+          Ready to transform your digital presence? Let&apos;s
+          <br /> create magic together! book our services now!
+        </p>
+        <ClientButton title=" Book a call" className="" />
       </article>
     </section>
   );
