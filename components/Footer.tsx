@@ -13,7 +13,7 @@ export default async function Footer() {
     },
   });
   return (
-    <footer className="bg-[#141414] text-gray-300 px-6 lg:px-16 py-16">
+    <footer className="bg-[#141414] text-gray-300   py-16 siteContainer">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
         {/* Logo + Tagline */}
         <div className="md:col-span-2">
